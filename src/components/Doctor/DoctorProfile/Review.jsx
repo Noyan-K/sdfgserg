@@ -52,7 +52,7 @@ const Review = ({ doctorId }) => {
     }, [createIsLoading, createTsError, createError, createIsSuccess])
 
     let content = null;
-    if (!isLoading && isError) content = <div>Something Went Wrong !</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады !</div>
     if (!isLoading && !isError && data?.length === 0) content = <div>Empty</div>
     if (!isLoading && !isError && data?.length > 0) content =
         <>
@@ -124,12 +124,12 @@ const Review = ({ doctorId }) => {
                         </div>
 
                         <div className="form-group">
-                            <label className='form-label'>Your review</label>
+                            <label className='form-label'>Your reқарау</label>
                             <textarea className="form-control" {...register("description")} placeholder="Description..." rows={8} />
                         </div>
                         <hr />
                         <div className="submit-section">
-                            <Button htmlType='submit' size='medium' type='primary' disabled={!showError}>Add Review</Button>
+                            <Button htmlType='submit' size='medium' type='primary' disabled={!showError}>Add Reқарау</Button>
                         </div>
                     </form>
 

@@ -15,13 +15,13 @@ const Dashboard = () => {
                 <div className="row">
                     {role === 'patient' &&
                         <div className="col-md-12 rounded" style={{ background: '#f8f9fa' }}>
-                            <h5 className="text-title my-3">My Appointments</h5>
+                            <h5 className="text-title my-3">Менің кездесулерім</h5>
                             <PatientDashboard />
                         </div>
                     }
                     {role === 'doctor' &&
                         <div className="col-md-12 rounded" style={{ background: '#f8f9fa' }}>
-                            <h5 className="text-title py-3">Appointments</h5>
+                            <h5 className="text-title py-3">Тағайындау</h5>
                             <DashboardPage />
                         </div>
                     }

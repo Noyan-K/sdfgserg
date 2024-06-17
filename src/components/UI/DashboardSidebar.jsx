@@ -37,8 +37,8 @@ const DashboardSidebar = () => {
                             <div className='profile-details'>
                                 <h5 className='mb-0'>{data?.firstName + " " + data?.lastName}</h5>
                                 <div className='mt-2'>
-                                    <p className=' form-text m-0'>24 Jul 1983, 38 Years</p>
-                                    <p className=' form-text m-0'> New Yourk , USA</p>
+                                    <p className=' form-text m-0'>24 Янв 1983, 38 жас</p>
+                                    <p className=' form-text m-0'> Актобе, Казахстан</p>
                                     <p className=' form-text m-0'>{data?.email}</p>
                                 </div>
                             </div>
@@ -53,32 +53,32 @@ const DashboardSidebar = () => {
                             <li>
                                 <NavLink to={'/dashboard'} activeClassName="active" end>
                                     <FaTable className="icon" />
-                                    <span>Dashboard</span>
+                                    <span>Бақылау тақтасы</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/dashboard/favourite'} activeClassName="active">
                                     <FaHouseUser className="icon" />
-                                    <span>Favourites</span>
+                                    <span>Таңдаулылар</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/dashboard/profile-setting'} activeClassName="active">
                                     <FaUserCog className="icon" />
-                                    <span>Profile Settings</span>
+                                    <span>Профиль Параметрлері</span>
                                 </NavLink>
                             </li>
 
                             <li>
                                 <NavLink to={'/dashboard/change-password'} activeClassName="active">
                                     <FaLock className="icon" />
-                                    <span>Change Password</span>
+                                    <span>Құпия Сөзді Өзгерту</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/'}>
                                     <FaSignOutAlt className="icon" />
-                                    <span>Logout</span>
+                                    <span>Шығу</span>
                                 </NavLink>
                             </li>
                         </ul>
@@ -87,71 +87,71 @@ const DashboardSidebar = () => {
                             <li>
                                 <NavLink to={'/dashboard'} activeClassName="active" end>
                                     <FaTable className="icon" />
-                                    <span>Dashboard</span>
+                                    <span>Бақылау тақтасы</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/dashboard/appointments'} activeClassName="active" end >
                                     <FaCalendarDay className="icon" />
-                                    <span>Appointments</span>
+                                    <span>Кездесулер</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/dashboard/my-patients'} activeClassName="active" end>
                                     <FaUserInjured className="icon" />
-                                    <span>My Patients</span>
+                                    <span>Менің Пациенттерім</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/dashboard/prescription'} activeClassName="active" end>
                                     <FaUserInjured className="icon" />
-                                    <span>Prescription</span>
+                                    <span>Рецепт бойынша</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/dashboard/schedule'} activeClassName="active" end>
                                     <FaCalendarDay className="icon" />
-                                    <span>Schedule Timings</span>
+                                    <span>Кесте Мерзімдері</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/dashboard/invoices'} activeClassName="active" end>
                                     <FaHourglassStart className="icon" />
-                                    <span>Invoices</span>
+                                    <span>Шот-фактуралар</span>
                                 </NavLink>
                             </li>
 
                             <li>
                                 <NavLink to={'/dashboard/reviews'} activeClassName="active" end>
                                     <FaRegStar className="icon" />
-                                    <span>Reviews</span>
+                                    <span>Пікірлер</span>
                                 </NavLink>
                             </li>
 
                             <li>
                                 <NavLink to={'/dashboard/profile-setting'} activeClassName="active" end>
                                     <FaUserCog className="icon" />
-                                    <span>Profile Settings</span>
+                                    <span>Профиль Параметрлері</span>
                                 </NavLink>
                             </li>
 
                             <li>
                                 <NavLink to={'/dashboard/blogs'} activeClassName="active" end>
                                     <FaBlog className="icon" />
-                                    <span>Blogs (Will move to Admin)</span>
+                                    <span>Блогтар (Әкімшіге ауысады)</span>
                                 </NavLink>
                             </li>
 
                             <li>
                                 <NavLink to={'/dashboard/change-password'} activeClassName="active" end>
                                     <FaLock className="icon" />
-                                    <span>Change Password</span>
+                                    <span>Құпия Сөзді Өзгерту</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/'}>
                                     <FaSignOutAlt className="icon" end />
-                                    <span>Logout</span>
+                                    <span>Шығу</span>
                                 </NavLink>
                             </li>
                         </ul>

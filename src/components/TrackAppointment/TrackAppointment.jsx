@@ -20,20 +20,20 @@ const TrackAppointment = () => {
 
     useEffect(() => {
         if (isSuccess && !isError && data?.id) {
-            message.success("Succcessfully Get Information !")
+            message.success("Ақпаратты Сәтті Алыңыз !")
             setShowInfo(!showInfo);
         }
         if (isError) {
             message.error(error?.data?.message);
         }
         if (isSuccess && data?.id === undefined) {
-            message.error("No Data is Available !")
+            message.error("Деректер жоқ!")
         }
     }, [isSuccess, isError, error, data]);
 
     // What to render
     let content = null;
-    if (!isLoading && isError) content = <div>Something Went Wrong!</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады!</div>
     if (!isLoading && !isError && data?.id) content = <TrackDetailPage data={data} setShowInfo={setShowInfo} />
     return (
         <>
@@ -45,14 +45,14 @@ const TrackAppointment = () => {
                         <div className="d-flex justify-content-center align-items-center" style={{ marginTop: '10rem' }}>
                             <div>
                                 <div className='mb-5 section-title text-center'>
-                                    <h2>Track Your Apppointment</h2>
-                                    <p className='m-0'>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                    <h2>Мақсатыңызды қадағалаңыз</h2>
+                                    <p className='m-0'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                                 </div>
                                 <div className='mx-auto d-flex justify-content-center'>
                                     <Search
-                                        placeholder="Track Your Appointment..."
+                                        placeholder="Мақсатыңызды қадағалаңыз..."
                                         allowClear
-                                        enterButton="Track"
+                                        enterButton="Бақылау"
                                         onSearch={onSearch}
                                         style={{ width: 400 }}
                                         size='large'
@@ -62,7 +62,7 @@ const TrackAppointment = () => {
                                 <section className="container" style={{ marginBottom: '8rem', marginTop: '5rem' }}>
                                     <div className="flex" style={{ maxWidth: '900px' }}>
                                         <div className='mb-4 section-title text-center'>
-                                            <h5 className='text-uppercase'>Availabe Service</h5>
+                                            <h5 className='text-uppercase'>Қолжетімді қызметтер</h5>
                                         </div>
                                         <AvailableServiceContent />
                                     </div>

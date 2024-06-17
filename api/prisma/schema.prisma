@@ -49,7 +49,7 @@ model Patient {
   city         String?
   state        String?
   zipCode      String?
-  gender       String?
+  Gender       String?
   country      String?
   email        String         @unique
   address      String?
@@ -72,7 +72,7 @@ model Doctor {
   address                String?
   img                    String?
   phone                  String?
-  gender                 Gender?
+  Gender                 Gender?
   dob                    String?
   biography              String?
   clinicName             String?

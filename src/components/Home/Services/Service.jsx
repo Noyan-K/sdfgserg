@@ -9,8 +9,8 @@ const Service = () => {
     return (
         <section className="container" style={{marginTop: 200, marginBottom:200}}>
             <div className='mb-5 section-title text-center'>
-                <h2>Services</h2>
-                <p className='m-0'>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <h2>Қызметтер</h2>
+                <p className='m-0'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
             </div>
             <div className="container">
                 <div className="row align-items-center">
@@ -27,9 +27,9 @@ const Service = () => {
                     </div>
                     <div className="col-lg-4">
                         <div className="service-content ps-4 mt-4 mt-lg-0">
-                            <h2>Personal care <br />healthy living</h2>
-                            <p className="mt-4 mb-5 text-secondary form-text">We provide best leading medicle service Nulla perferendis veniam deleniti ipsum officia dolores repellat laudantium obcaecati neque.</p>
-                            <Link to={'/service'} className="btn-get-started scrollto">Services</Link>
+                            <h2>Жеке гигиена <br />салауатты өмір кепілі</h2>
+                            <p className="mt-4 mb-5 text-secondary form-text">Біз ең жақсы медициналық қызметтерді ұсынамыз.</p>
+                            <Link to={'/service'} className="btn-get-started scrollto">Қызметтер</Link>
                         </div>
                     </div>
                 </div>

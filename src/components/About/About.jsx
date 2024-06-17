@@ -19,7 +19,7 @@ const About = () => {
     const doctors = doctorData?.doctors;
 
     let doctorContent = null;
-    if (!DoctorIsLoading && doctorIsError) doctorContent = <div>Something Went Wrong !</div>
+    if (!DoctorIsLoading && doctorIsError) doctorContent = <div>Бірдеңе дұрыс болмады!</div>
     if (!DoctorIsLoading && !doctorIsError && doctors?.length === 0) doctorContent = <div><Empty /></div>
     if (!DoctorIsLoading && !doctorIsError && doctors?.length > 0) doctorContent =
         <>
@@ -37,7 +37,7 @@ const About = () => {
         </>
 
     let content = null;
-    if (!isLoading && isError) content = <div>{message.error('Something went Wrong!')}</div>
+    if (!isLoading && isError) content = <div>{message.error('Бірдеңе дұрыс болмады!')}</div>
     if (!isLoading && !isError && blogData?.length === 0) content = <Empty />
     if (!isLoading && !isError && blogData?.length > 0) content =
         <>
@@ -63,15 +63,15 @@ const About = () => {
     return (
         <>
             <Header />
-            <SubHeader title="about us" subtitle="Lorem ipsum dolor sit amet consectetur adipisicing." />
+            <SubHeader title="Біз туралы" subtitle="Lorem ipsum dolor sit amet consectetur adipisicing." />
             <div className="container" style={{ marginBottom: 100, marginTop: 100 }}>
                 <div className="row p-5">
                     <div className="col-lg-4">
                         <div className='section-title text-center'>
-                            <h2 className='text-uppercase'>Our Doctors Acheivement</h2>
-                            <p className='form-text m-0'>Lorem ipsum dolor sit amet.</p>
+                            <h2 className='text-uppercase'>Біздің дәрігерлердің жетістіктері</h2>
+                            <p className='form-text m-0'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                         </div>
-                        <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quod laborum alias. Vitae dolorum, officia sit! Saepe ullam facere at, consequatur incidunt, quae esse, quis ut reprehenderit dignissimos, libero delectus.</p>
+                        <p className='mt-3'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                     </div>
 
                     <div className="col-lg-8">
@@ -91,8 +91,8 @@ const About = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-4">
                         <div className='section-title text-center'>
-                            <h2 className='text-uppercase'>Our Doctors Acheivement</h2>
-                            <p className='form-text m-0'>Lorem ipsum dolor sit amet.</p>
+                            <h2 className='text-uppercase'>Біздің дәрігерлердің жетістіктері</h2>
+                            <p className='form-text m-0'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                         </div>
                     </div>
                     <div className="col-lg-8">
@@ -115,8 +115,8 @@ const About = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-6">
                         <div className='mb-4 section-title text-center'>
-                            <h2 className='text-uppercase'>Meet Our Specialist</h2>
-                            <p className='form-text m-0'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, ipsum!</p>
+                            <h2 className='text-uppercase'>Біздің маманмен танысыңыз</h2>
+                            <p className='form-text m-0'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                         </div>
                     </div>
                 </div>
@@ -131,8 +131,8 @@ const About = () => {
                 <div className="row">
                     <div className="col-lg-6 offset-lg-6">
                         <div className='mb-4 section-title text-center'>
-                            <h2 className='text-uppercase'>What Doctor's Say</h2>
-                            <p className='form-text m-0'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, ipsum!</p>
+                            <h2 className='text-uppercase'>Дәрігер не дейді</h2>
+                            <p className='form-text m-0'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                         </div>
                     </div>
                 </div>
@@ -140,11 +140,11 @@ const About = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 offset-lg-6">
                         <div className="my-2">
-                            <h4 style={{ color: '#223a66' }} className='my-0'>Amazing service!</h4>
-                            <span>John Partho</span>
+                            <h4 style={{ color: '#223a66' }} className='my-0'>Керемет қызмет!</h4>
+                            <span>Джон Парто</span>
                         </div>
                         <p className='form-text'>
-                            They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat. Quibusdam laboriosam eveniet nostrum nemo commodi numquam quod.
+                            Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.
                         </p>
                     </div>
                 </div>

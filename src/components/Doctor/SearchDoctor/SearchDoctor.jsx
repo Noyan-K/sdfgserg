@@ -25,7 +25,7 @@ const SearchDoctor = () => {
     query["sortBy"] = sortBy;
     query["sortOrder"] = sortOrder;
 
-    sortByGender !== '' && (query["gender"] = sortByGender);
+    sortByGender !== '' && (query["Gender"] = sortByGender);
     specialist !== '' && (query["specialist"] = specialist);
 
     const priceDebounced = useDebounced({ searchQuery: priceRange, delay: 600 });
@@ -57,7 +57,7 @@ const SearchDoctor = () => {
     //what to render
     let content = null;
     if (isLoading) content = <>Loading ...</>;
-    if (!isLoading && isError) content = <div>Something Went Wrong !</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады !</div>
     if (!isLoading && !isError && doctorsData.length === 0) content = <div><Empty /></div>
     if (!isLoading && !isError && doctorsData.length > 0) content =
         <>
@@ -76,7 +76,7 @@ const SearchDoctor = () => {
     return (
         <div>
             <Header />
-            <SubHeader title='Doctors' subtitle='Lorem ipsum dolor sit amet.' />
+            <SubHeader title='Doctors' subtitle='Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.' />
             <div className="container" style={{ marginBottom: 200, marginTop: 80 }}>
                 <div className="container-fluid">
                     <div className="row">

@@ -12,8 +12,8 @@ const ClinicAndSpecialities = () => {
 		<section className="section section-specialities position-relative">
 			<div className="container-fluid">
 				<div className='mb-5 section-title text-center'>
-					<h2>Clinic and Specialities</h2>
-					<p className='m-0'>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+					<h2>Клиника және мамандандыру</h2>
+					<p className='m-0'>Шамамен келесідей Даулы көзқарас бар: ішкі саясаттың кейбір ерекшеліктері тек фракциялық келіспеушіліктерді қосады және өте жағымды түрде ұсынылған. Әрине, оппозиция өкілдерінің әрекеттері негізгі факторлардың рөліне үміткерлер ретінде көрсетілген. Бұл мәселелердің маңыздылығы соншалықты айқын, сондықтан перспективалық жоспарлау терең ойлаудың маңыздылығын анықтайды.</p>
 				</div>
 
 				<div className="row justify-content-center">
@@ -24,35 +24,35 @@ const ClinicAndSpecialities = () => {
 									<img src={img1} className="img-fluid" alt="" />
 									<span><i><FaCheckDouble/></i></span>
 								</div>
-								<p>Urology</p>
+								<p>Урология</p>
 							</div>
 							<div className="speicality-item text-center">
 								<div className="speicality-img">
 									<img src={img2} className="img-fluid" alt="" />
 									<span><i><FaCheckDouble/></i></span>
 								</div>
-								<p>Neurology</p>
+								<p>Неврология</p>
 							</div>
 							<div className="speicality-item text-center">
 								<div className="speicality-img">
 									<img src={img3} className="img-fluid" alt="" />
 									<span><i><FaCheckDouble/></i></span>
 								</div>
-								<p>Orthopedic</p>
+								<p>Ортопедиялық</p>
 							</div>
 							<div className="speicality-item text-center">
 								<div className="speicality-img">
 									<img src={img4} className="img-fluid" alt="" />
 									<span><i><FaCheckDouble/></i></span>
 								</div>
-								<p>Cardiologist</p>
+								<p>Кардиолог</p>
 							</div>
 							<div className="speicality-item text-center">
 								<div className="speicality-img">
 									<img src={img5} className="img-fluid" alt="" />
 									<span><i><FaCheckDouble/></i></span>
 								</div>
-								<p>Dentist</p>
+								<p>Дантист</p>
 							</div>
 						</div>
 					</div>

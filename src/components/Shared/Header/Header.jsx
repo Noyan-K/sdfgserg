@@ -36,7 +36,7 @@ const Header = () => {
 
     const hanldeSignOut = () => {
         loggedOut();
-        message.success("Successfully Logged Out")
+        message.success("Жүйеден Сәтті Шықты")
         setIsLogged(false)
         navigate('/')
     }
@@ -47,10 +47,10 @@ const Header = () => {
             <div className='my-2'>
                 <h5 className='text-capitalize'>{data?.firstName + ' ' + data?.lastName}</h5>
                 <p className='my-0'>{data?.email}</p>
-                <Link to="/dashboard">Deshboard</Link>
+                <Link to="/dashboard">Бақылау тақтасы</Link>
             </div>
             <Button variant="outline-danger" className='w-100' size="sm" onClick={hanldeSignOut}>
-                Logged Out
+                Жүйеден Шығу
             </Button>
         </div >
     );
@@ -67,7 +67,7 @@ const Header = () => {
                     </Link>
                     <HeaderNav isLoggedIn={isLoggedIn} data={data}
                         avatar={avatar} content={content} open={open} setOpen={setOpen} />
-                    <Link to={'/appointment'} className="appointment-btn scrollto"><span className="d-none d-md-inline">Make an</span> Appointment</Link>
+                    <Link to={'/appointment'} className="appointment-btn scrollto"><span className="d-none d-md-inline">Қабылдауға</span> жазылу</Link>
                 </div>
             </header>
         </>

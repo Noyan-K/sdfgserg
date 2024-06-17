@@ -63,7 +63,7 @@ const PatientProfileSetting = () => {
     return (
         <div style={{ marginBottom: '10rem' }}>
             <div className="w-100 mb-3 rounded mb-5 p-2" style={{ background: '#f8f9fa' }}>
-                <h5 className="text-title mb-2 mt-3">Update Your Information</h5>
+                <h5 className="text-title mb-2 mt-3">Ақпаратыңызды жаңартыңыз</h5>
                 <form className="row form-row" onSubmit={handleSubmit(onSubmit)}>
                     <div className="col-md-12">
                         <div className="form-group">
@@ -80,13 +80,13 @@ const PatientProfileSetting = () => {
 
                     <div className="col-md-6">
                         <div className="form-group mb-2 card-label">
-                            <label>First Name <span className="text-danger">*</span></label>
+                            <label>Аты <span className="text-danger">*</span></label>
                             <input defaultValue={data?.firstName} {...register("firstName")} className="form-control" />
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="form-group mb-2 card-label">
-                            <label>Last Name <span className="text-danger">*</span></label>
+                            <label>Тегі <span className="text-danger">*</span></label>
                             <input defaultValue={data?.lastName} {...register("lastName")} className="form-control" />
                         </div>
                     </div>
@@ -106,18 +106,17 @@ const PatientProfileSetting = () => {
 
                     <div className="col-md-6">
                         <div className="form-group mb-2 card-label">
-                            <label>Phone Number</label>
+                            <label>Телефон Нөмірі</label>
                             <input defaultValue={data?.mobile} {...register("mobile")} className="form-control" />
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="form-group mb-2">
-                            <label>Gender</label>
-                            <select className="form-control select" onChange={handleChange} name='gender'>
+                            <label>Жыныс</label>
+                            <select className="form-control select" onChange={handleChange} name='Gender'>
                                 <option value={''}>Select</option>
                                 <option className='text-capitalize'>male</option>
                                 <option className='text-capitalize'>female</option>
-                                <option className='text-capitalize'>shemale</option>
                             </select>
                         </div>
                     </div>
@@ -141,7 +140,7 @@ const PatientProfileSetting = () => {
 
                     <div className="col-md-6">
                         <div className="form-group mb-2">
-                            <label className='form-label'>City</label>
+                            <label className='form-label'>Қала</label>
                             <input defaultValue={data?.city} {...register("city")} className="form-control" />
                         </div>
                     </div>
@@ -160,7 +159,7 @@ const PatientProfileSetting = () => {
                     </div>
                     <div className="col-md-6">
                         <div className="form-group mb-2 card-label">
-                            <label>Country</label>
+                            <label>Ел</label>
                             <input defaultValue={data?.country} {...register("country")} className="form-control" />
                         </div>
                     </div>
@@ -171,7 +170,7 @@ const PatientProfileSetting = () => {
                         </div>
                     </div>
                     <div className='text-center'>
-                        <button type="submit" className="btn btn-primary my-3" disabled={isLoading ? true : false}>{isLoading ? 'Updating..' : 'Save Changes'}</button>
+                        <button type="submit" className="btn btn-primary my-3" disabled={isLoading ? true : false}>{isLoading ? 'Updating..' : 'Өзгерістерді Сақтау'}</button>
                     </div>
                 </form>
             </div>

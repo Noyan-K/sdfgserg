@@ -7,13 +7,13 @@ const HeroSection = () => {
         <section id="hero" className="d-flex align-items-center">
             <div className="container">
                 <div>
-                    <small>TOTAL HEALTH CARE SOLUTION</small>
-                    <h1>Your Most Trusted <br />Health Partner</h1>
-                    <small>A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat.</small>
+                    <small>ДЕНСАУЛЫҚҚА АРНАЛҒАН ТОЛЫҚ ШЕШІМ</small>
+                    <h1>Сіздің ең сенімді <br />Денсаулық серіктесіңіз</h1>
+                    <small>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</small>
                 </div>
                 <div className="d-flex justify-content-start gap-2">
-                    <Link to={'/doctors'} className="btn-get-started scrollto">Get Started</Link>
-                    <Link to={'/track-appointment'} className="btn-get-started scrollto">Track Appointment</Link>
+                    <Link to={'/doctors'} className="btn-get-started scrollto">Бастау</Link>
+                    <Link to={'/track-appointment'} className="btn-get-started scrollto">Кездесуді қадағалау</Link>
                 </div>
             </div>
         </section>

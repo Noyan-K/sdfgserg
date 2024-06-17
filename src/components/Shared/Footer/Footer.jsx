@@ -18,20 +18,20 @@ const Footer = () => {
 									</Link>
 								</div>
 								<div className="footer-about-content">
-									<p className='form-text' style={{maxWidth:200}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<p className='form-text' style={{maxWidth:200}}>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
 								</div>
 							</div>
 						</div>
 
 						<div className="col-6 col-md-6 col-lg-3">
 							<div className="footer-widget footer-menu">
-								<h2 className="footer-title">For Patients</h2>
+								<h2 className="footer-title">Для пациентов</h2>
 								<ul>
-									<li><Link to={'/doctors'}><FaAngleDoubleRight className='icon' />  Search for Doctors</Link></li>
-									<li><Link to={'/login'}><FaAngleDoubleRight className='icon' />  Login</Link></li>
-									<li><Link to={'/login'}><FaAngleDoubleRight className='icon' />  Register</Link></li>
-									<li><Link to={'/doctors'}><FaAngleDoubleRight className='icon' />  Booking</Link></li>
-									<li><Link to={'/'}><FaAngleDoubleRight className='icon' />  Patient Dashboard</Link></li>
+									<li><Link to={'/doctors'}><FaAngleDoubleRight className='icon' />  Поиск врачей</Link></li>
+									<li><Link to={'/login'}><FaAngleDoubleRight className='icon' />  Авторизоваться</Link></li>
+									<li><Link to={'/login'}><FaAngleDoubleRight className='icon' />  регистр</Link></li>
+									<li><Link to={'/doctors'}><FaAngleDoubleRight className='icon' />  Бронирование</Link></li>
+									<li><Link to={'/'}><FaAngleDoubleRight className='icon' />  Панель управления пациента</Link></li>
 								</ul>
 							</div>
 						</div>
@@ -41,29 +41,29 @@ const Footer = () => {
 							<div className="footer-widget footer-menu">
 								<h2 className="footer-title">For Doctors</h2>
 								<ul>
-									<li><Link to={'/'}><FaAngleDoubleRight className='icon' /> Appointments</Link></li>
-									<li><Link to={'/login'}><FaAngleDoubleRight className='icon' /> Login</Link></li>
-									<li><Link to={'/register'}><FaAngleDoubleRight className='icon' /> Register</Link></li>
-									<li><Link to={'/dashboard'}><FaAngleDoubleRight className='icon' /> Doctor Dashboard</Link></li>
+									<li><Link to={'/'}><FaAngleDoubleRight className='icon' /> Назначения</Link></li>
+									<li><Link to={'/login'}><FaAngleDoubleRight className='icon' /> Авторизоваться</Link></li>
+									<li><Link to={'/register'}><FaAngleDoubleRight className='icon' /> Регистрация</Link></li>
+									<li><Link to={'/dashboard'}><FaAngleDoubleRight className='icon' /> Панель управления доктора</Link></li>
 								</ul>
 							</div>
 						</div>
 
 						<div className="col-6 col-md-6 col-lg-3">
 							<div className="footer-widget footer-contact">
-								<h2 className="footer-title mt-3 mt-md-0">Contact Us</h2>
+								<h2 className="footer-title mt-3 mt-md-0">Связаться с нами</h2>
 								<div className="footer-contact-info">
 									<div className="footer-address">
 										<span><i className="fas fa-map-marker-alt"></i></span>
-										<p> 121, Mirzapure Union office,<br /> Sylhet, Bangladesh 03214 </p>
+										<p> 121, Бр.Жубновых,<br /> Актобе, Казахстан</p>
 									</div>
 									<p>
 										<i className="fas fa-phone-alt"></i>
-										+88 017 51 040425
+										+8 707 513 0404
 									</p>
 									<p className="mb-0">
 										<i className="fas fa-envelope"></i>
-										ujjalzaman@gmail.com
+										noyan992@gmail.com
 									</p>
 								</div>
 							</div>
@@ -80,15 +80,15 @@ const Footer = () => {
 								<div className="copyright-text">
 									<p className="mb-0"><a href="templateshub.net">
 										<div className="copyRight text-center">
-											<p>Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
+											<p>Copyright {(new Date()).getFullYear()} Все права защищены</p>
 										</div></a></p>
 								</div>
 							</div>
 							<div className="col-md-6 col-lg-6">
 								<div className="copyright-menu">
 									<ul className="policy-menu d-flex gap-2 justify-content-center">
-										<Link to={'/'} className='text-white'>Terms and Conditions</Link>
-										<Link to={'/'} className='text-white'>Policy</Link>
+										<Link to={'/'} className='text-white'>Условия и положения</Link>
+										<Link to={'/'} className='text-white'>Политика</Link>
 									</ul>
 								</div>
 							</div>

@@ -9,11 +9,11 @@ import { Navigation, Autoplay } from 'swiper/modules';
 
 const AvailableServiceContent = () => {
     const availabeServiceArray = [
-        { title: 'ICU', img: img },
-        { title: 'Chamber', img: img5 },
-        { title: 'Patient Ward', img: img2 },
-        { title: 'Test Room', img: img3 },
-        { title: 'Laboratory', img: img4 },
+        { title: "Қарқынды терапия бөлімі", img: img },
+        { title: 'Камера', img: img5 },
+        { title: 'Пациенттер палатасы', img: img2 },
+        { title: 'Сынақ бөлмесі', img: img3 },
+        { title: 'Лаборатория', img: img4 },
     ]
     return (
         <div className="d-flex justify-content-center align-items-center gap-4">

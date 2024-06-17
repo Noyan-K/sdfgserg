@@ -12,7 +12,7 @@ const Prescription = () => {
 
     const columns = [
         {
-            title: 'Appointment Id',
+            title: 'Кездесу идентификаторы',
             dataIndex: "appointment",
             key: 1,
             render: ({trackingId}) =>{
@@ -22,13 +22,13 @@ const Prescription = () => {
             }
         },
         {
-            title: 'Disease',
+            title: 'Ауру',
             sorter: true,
             dataIndex: "disease",
             key: 3,
         },
         {
-            title: 'Follow-Update',
+            title: 'Кейінгі жаңарту',
             dataIndex: "followUpdate",
             key: 4,
             render: function (data) {
@@ -36,7 +36,7 @@ const Prescription = () => {
             }
         },
         {
-            title: 'Archived',
+            title: 'Мұрағатта',
             dataIndex: "isArchived",
             key: 4,
             render: function ({isArchived}) {
@@ -44,7 +44,7 @@ const Prescription = () => {
             }
         },
         {
-            title: 'createdAt',
+            title: 'құрылған уақыты',
             dataIndex: 'createdAt',
             key: 5,
             sorter: true,
@@ -53,7 +53,7 @@ const Prescription = () => {
             }
         },
         {
-            title: 'Action',
+            title: 'Әрекет',
             key: 4,
             render: function (data) {
                 return (
@@ -78,11 +78,11 @@ const Prescription = () => {
     ];
 
     const deleteHandler = async (id) => {
-        message.loading("Deleting ...");
+        message.loading("Удаление...");
         try {
             const res = await deleteBlog(id);
             if (res) {
-                message.success("Successfully Deleted !!");
+                message.success("Успешно удалено!!");
             }
         } catch (error) {
             message.error(error.message);

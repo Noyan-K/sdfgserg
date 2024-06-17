@@ -42,7 +42,7 @@ const SignUp = ({ setSignUp }) => {
     useEffect(() => {
         // doctor account
         if (dIsError && dError) {
-            message.error("Email Already Exist !!")
+            message.error("Электрондық пошта бұрыннан бар!")
             setLoading(false);
         }
 
@@ -52,14 +52,14 @@ const SignUp = ({ setSignUp }) => {
             setLoading(false);
             swal({
                 icon: 'success',
-                text: `Successfully Account Created Please Verify Your email`,
+                text: `Есептік жазба сәтті жасалды. Электрондық пошта мекенжайыңызды растаңыз.`,
                 timer: 5000
             })
         }
 
         // Patient account
         if (pIsError && pError) {
-            message.error("Email Already Exist !!")
+            message.error("Электрондық пошта бұрыннан бар!")
             setLoading(false);
         }
         if (!pIsError && pIsSuccess) {
@@ -68,7 +68,7 @@ const SignUp = ({ setSignUp }) => {
             setSignUp(false);
             swal({
                 icon: 'success',
-                text: `Successfully ${userType === 'doctor' ? 'Doctor' : 'Patient'} Account Created Please Login`,
+                text: `Сәтті ${userType === 'doctor' ? 'Врач' : 'Пациент'} Тіркелгі жасалды кіріңіз`,
                 timer: 2000
             })
         }
@@ -137,11 +137,11 @@ const SignUp = ({ setSignUp }) => {
             <h2 className="title">Sign Up</h2>
             <div className="input-field">
                 <span className="fIcon"><FaUser /></span>
-                <input placeholder="First Name" name="firstName" type="text" onChange={(e) => hanldeOnChange(e)} value={user.firstName} />
+                <input placeholder="Аты" name="firstName" type="text" onChange={(e) => hanldeOnChange(e)} value={user.firstName} />
             </div>
             <div className="input-field">
                 <span className="fIcon"><FaUser /></span>
-                <input placeholder="Last Name" name="lastName" type="text" onChange={(e) => hanldeOnChange(e)} value={user.lastName} />
+                <input placeholder="Тегі" name="lastName" type="text" onChange={(e) => hanldeOnChange(e)} value={user.lastName} />
             </div>
             <div className="input-field">
                 <span className="fIcon"><FaEnvelope /></span>
@@ -159,8 +159,8 @@ const SignUp = ({ setSignUp }) => {
                     onChange={(e) => handleUserTypeChange(e)}
                     defaultValue='patient'
                 >
-                    <option value="patient">Patient</option>
-                    <option value="doctor">Doctor</option>
+                    <option value="patient">Науқас</option>
+                    <option value="doctor">Дәрігер</option>
                 </select>
             </div>
             {error.length && <h6 className="text-danger text-center">{error}</h6>}
@@ -171,38 +171,38 @@ const SignUp = ({ setSignUp }) => {
                     passwordValidation.carLength && passwordValidation.numeric && passwordValidation.upperLowerCase && passwordValidation.specailChar && emailError.emailError ? "" : true
                 }
             >
-                {loading ? <Spinner animation="border" variant="info" /> : "Sign Up"}
+                {loading ? <Spinner animation="border" variant="info" /> : "Тіркелу"}
             </button>
 
             <div className="password-validatity mx-auto">
 
                 <div style={emailError.emailError ? { color: "green" } : { color: "red" }}>
                     <p>{passwordValidation.numeric ? <FaCheck /> : <FaTimes />}
-                        <span className="ms-2">Must Have Valid Email.</span></p>
+                        <span className="ms-2">Жарамды электрондық пошта мекенжайы болуы керек.</span></p>
                 </div>
 
                 <div style={passwordValidation.carLength ? { color: "green" } : { color: "red" }}>
                     <p>{passwordValidation.numeric ? <FaCheck /> : <FaTimes />}
-                        <span className="ms-2">Password Must Have atlast 8 character.</span></p>
+                        <span className="ms-2">Құпия сөзде кемінде 8 таңба болуы керек.</span></p>
                 </div>
 
                 <div style={passwordValidation.specailChar ? { color: "green" } : { color: "red" }}>
                     <p>{passwordValidation.numeric ? <FaCheck /> : <FaTimes />}
-                        <span className="ms-2">Password Must Have a special cracter.</span></p>
+                        <span className="ms-2">Құпия сөзде арнайы таңба болуы керек.</span></p>
                 </div>
 
                 <div style={passwordValidation.upperLowerCase ? { color: "green" } : { color: "red" }}>
                     <p>{passwordValidation.numeric ? <FaCheck /> : <FaTimes />}
-                        <span className="ms-2">Password Must Have uppercase and lower case.</span></p>
+                        <span className="ms-2">Құпия сөзде үлкен және кіші әріптер болуы керек.</span></p>
                 </div>
 
                 <div style={passwordValidation.numeric ? { color: "green" } : { color: "red" }}>
                     <p>{passwordValidation.numeric ? <FaCheck /> : <FaTimes />}
-                        <span className="ms-2">Password Must Have Number.</span></p>
+                        <span className="ms-2">Құпия сөздің нөмірі болуы керек.</span></p>
                 </div>
             </div>
 
-            <p className="social-text">Or Sign up with social account</p>
+            <p className="social-text">Немесе әлеуметтік желі арқылы тіркеліңіз</p>
             <SocialSignUp />
         </form>
 

@@ -1,20 +1,20 @@
 export const appointStatusDsc = {
-    payment: 'Payment Status: Set to "paid" to represent a payment that is completed',
+    payment: 'Төлем Күйі: аяқталған төлемді көрсету үшін "төленген" күйіне Орнатыңыз',
     appointment: {
-        FollowUp: 'Set to "Follow-up" to represent get re-appointment with the doctor',
-        pending: 'Set to "pending" to represent a appointment that is yet to be schedule.possible next step is appointment scheduled',
-        scheduled: 'Changed to "Scheduled" to indicate an appointment that is scheduled',
-        Completed: "If the appointment has been successfully concluded.",
-        Canceled: "If the appointment is canceled by either the patient or the healthcare provider.",
-        'Follow-up Scheduled': 'If a follow-up appointment is scheduled.',
-        cancel: 'If the appointment cannot be completed for some reason.',
-        archived: 'If the appointment is closed and moved to historical records.',
+        FollowUp: 'Дәрігерге қайта жазылуды ұсыну үшін "Бақылау" күйіне орнатыңыз',
+        pending: 'Әлі жоспарланбаған кездесуді көрсету үшін "күту" күйіне орнатыңыз.мүмкін келесі қадам-кездесуді жоспарлау',
+        scheduled: 'Жоспарланған кездесуді көрсету үшін "Жоспарланған" күйіне өзгертілді',
+        Completed: "Егер тағайындау сәтті аяқталған болса.",
+        Canceled: "Егер кездесуді пациент немесе медициналық қызмет көрсетуші тоқтатса.",
+        'Follow-up Scheduled': 'Егер келесі кездесу жоспарланған болса.',
+        cancel: 'Егер қандай да бір себептермен кездесуді аяқтау мүмкін болмаса.',
+        archived: 'Егер кездесу жабылып, тарихи жазбаларға көшірілсе.',
         InProgress: 'Lorem ipsum dollar sumit',
-        confirmed : 'When the patient and doctor confirms the appointment.',
+        confirmed : 'Науқас пен дәрігер кездесуді растаған кезде.',
     },
-    followUpDate: 'Represent a different follow-up date.',
+    followUpDate: 'Басқа бақылау күнін көрсетіңіз.',
     prescriptionStatus: {
-        issued: "Set to 'issued' to represent that a prescription has been issued.",
-        notIssued: "Set to 'not_issued' to represent that a prescription has not been issued yet."
+        issued: "Рецепт берілгенін көрсету үшін 'берілген' күйіне орнатыңыз.",
+        notIssued: "Рецепт әлі берілмегенін көрсету үшін 'not_issued' күйіне орнатыңыз."
     }
 }

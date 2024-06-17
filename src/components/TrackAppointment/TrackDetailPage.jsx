@@ -30,7 +30,7 @@ const TrackDetailPage = ({ data, setShowInfo }) => {
 
               <div className='card shadow-sm p-3 text-center shadow border-0 bg-success'>
                 <div className='text-white'>
-                  <h6 className='text-start text-primary text-uppercase text-black'>Patient</h6>
+                  <h6 className='text-start text-primary text-uppercase text-black'>Пациент</h6>
                   <div className='d-flex gap-2'>
                     <div className='img-div'>
                       {data?.patient?.img ? <img src={data?.patient?.img} alt='' /> : <img src={img} alt='' />}
@@ -61,21 +61,21 @@ const TrackDetailPage = ({ data, setShowInfo }) => {
           </div>
 
           <div className='col-md-8'>
-            <h4 className='text-center text-capitalized'>Status : {data?.status}</h4>
+            <h4 className='text-center text-capitalized'>Статус : {data?.status}</h4>
             <p className='px-5 form-text text-center'>{appointStatusDsc.appointment[data?.status]}</p>
 
             <div className='d-flex justify-content-center mt-4'>
               <div className='text-center'>
-                <h5>Meeting Schedule: </h5>
-                <div className='text-secondary text-start'><FaCalendarCheck className='me-2' />Appointment Date : {moment(data?.scheduleDate).format("MMM Do YY")}</div>
-                <div className='text-secondary text-start'><FaRegClock className='me-2' />Appointment Time : {data?.scheduleTime}</div>
+                <h5>Кездесу Кестесі: </h5>
+                <div className='text-secondary text-start'><FaCalendarCheck className='me-2' />Кездесу Күні : {moment(data?.scheduleDate).format("MMM Do YY")}</div>
+                <div className='text-secondary text-start'><FaRegClock className='me-2' />Кездесу Уақыты : {data?.scheduleTime}</div>
               </div>
             </div>
           </div>
         </div>
 
         <div>
-          <h4 className='text-center mt-4 text-uppercase'>Appointment Timeline: </h4>
+          <h4 className='text-center mt-4 text-uppercase'>Кездесу Кестесі: </h4>
           <AppointmentTimeLine data={data} />
         </div>
       </div>

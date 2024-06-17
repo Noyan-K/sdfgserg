@@ -20,42 +20,42 @@ const AdminSidebar = () => {
                         </li>
                         <li className="active">
                             <Link to={'/admin/dashboard'}>
-                                <FaHome /> <span>Dashboard</span>
+                                <FaHome /> <span>Бақылау тақтасы</span>
                             </Link>
                         </li>
                         <li>
                             <Link to={'/admin/appointments'}>
-                                <FaListUl /> <span>Appointments</span>
+                                <FaListUl /> <span>Кездесулер</span>
                             </Link>
 
 
                         </li>
                         <li>
                             <Link to={'/admin/specialites'}>
-                                <FaPeopleArrows /> <span>Specialities</span>
+                                <FaPeopleArrows /> <span>Мамандықтар</span>
                             </Link>
                         </li>
                         <li>
                             <Link to={'/admin/doctors'}>
-                                <FaUserAstronaut /> <span>Doctors</span>
+                                <FaUserAstronaut /> <span>Дәрігерлер</span>
                             </Link>
 
                         </li>
                         <li>
                             <Link to={'/admin/patients'}>
-                                <FaRegUser /> <span>Patients</span>
+                                <FaRegUser /> <span>Науқастар</span>
                             </Link>
 
                         </li>
                         <li>
                             <Link to={'/admin/reviews'}>
-                                <FaRegStar /> <span>Reviews</span>
+                                <FaRegStar /> <span>Пікірлер</span>
                             </Link>
 
                         </li>
                         <li>
                             <Link to={'/admin/transaction'}>
-                                <FaBriefcase /><span>Transactions</span>
+                                <FaBriefcase /><span>Мәмілелер</span>
                             </Link>
 
                         </li>
@@ -63,15 +63,15 @@ const AdminSidebar = () => {
                         <li className="submenu">
                             <a href="#"><i className="fe fe-document"></i> <span> Reports</span> <span className="menu-arrow"></span></a>
                             <ul style={{ display: "none" }}>
-                                <li><a >Invoice Reports</a></li>
+                                <li><a >Шот-Фактуралар Туралы Есептер</a></li>
                             </ul>
                         </li>
                         <li className="menu-title">
-                            <span>Pages</span>
+                            <span>Беттер</span>
                         </li>
                         <li className='text-white'>
                             <Link to={'/admin/profile'}>
-                                <FaRegUser /> <span>Profile</span>
+                                <FaRegUser /> <span>Профиль</span>
                             </Link>
                         </li>
                     </ul>

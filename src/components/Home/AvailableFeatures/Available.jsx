@@ -14,8 +14,8 @@ const Availabe = () => {
 					</div>
 					<div className="col-md-7">
 						<div className='mb-4 section-title text-center'>
-							<h2 className='text-uppercase'>Availabe Service</h2>
-							<p className='m-0'>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+							<h2 className='text-uppercase'>Қолжетімді қызмет</h2>
+							<p className='m-0'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
 						</div>
 						<AvailableServiceContent/>
 					</div>

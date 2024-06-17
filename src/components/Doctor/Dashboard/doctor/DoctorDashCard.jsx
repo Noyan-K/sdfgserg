@@ -4,21 +4,21 @@ const DoctorDashCard = () => {
     const cardData = [
         {
             icon: <FaHospital className='icon' />,
-            title: 'Total Patient',
+            title: 'Барлық пациенттер',
             amount: 1500,
-            date: "10 Jan 2024"
+            date: "10 Янв 2024"
         },
         {
             icon: <FaHospitalUser className='icon active' />,
-            title: 'Today Patient',
+            title: 'Бүгінгі науқас',
             amount: 1500,
-            date: "10 Jan 2024"
+            date: "10 Янв 2024"
         },
         {
             icon: <FaCalendarAlt className='icon danger' />,
-            title: 'Appointments',
+            title: 'Тағайындау',
             amount: 85,
-            date: "10 Jan 2024"
+            date: "10 Янв 2024"
         }
     ]
     return (

@@ -31,7 +31,7 @@ const DashboardPage = () => {
 
     useEffect(() => {
         if (isSuccess) {
-            message.success("Succcessfully Appointment Updated")
+            message.success("Встреча успешно обновлена")
         }
         if (isError) {
             message.error(error?.data?.message);
@@ -40,7 +40,7 @@ const DashboardPage = () => {
 
     const upcomingColumns = [
         {
-            title: 'Patient Name',
+            title: 'Науқастың аты',
             key: '1',
             width: 100,
             render: function (data) {
@@ -63,7 +63,7 @@ const DashboardPage = () => {
             }
         },
         {
-            title: 'App Date',
+            title: 'Қосымшаның күні',
             key: '2',
             width: 100,
             render: function (data) {
@@ -73,7 +73,7 @@ const DashboardPage = () => {
             }
         },
         {
-            title: 'Status',
+            title: 'Статус',
             key: '4',
             width: 100,
             render: function (data) {
@@ -83,7 +83,7 @@ const DashboardPage = () => {
             }
         },
         {
-            title: 'Action',
+            title: 'Әрекет',
             key: '5',
             width: 100,
             render: function (data) {
@@ -93,7 +93,7 @@ const DashboardPage = () => {
                             data.prescriptionStatus === 'notIssued'
                                 ?
                                 <Link to={`/dashboard/appointment/treatment/${data?.id}`}>
-                                    <Button type="primary" icon={<FaBriefcaseMedical />} size="small">Treatment</Button>
+                                    <Button type="primary" icon={<FaBriefcaseMedical />} size="small">Уход</Button>
                                 </Link>
 
                                 :
@@ -104,8 +104,8 @@ const DashboardPage = () => {
                         {
                             data?.status === 'pending' &&
                             <>
-                                <Button type="primary" icon={<FaCheck />} size="small" onClick={() => updatedApppointmentStatus(data, 'accept')}>Accept</Button>
-                                <Button type='primary' icon={<FaTimes />} size='small' danger onClick={() => updatedApppointmentStatus(data, 'cancel')}>Cancel</Button>
+                                <Button type="primary" icon={<FaCheck />} size="small" onClick={() => updatedApppointmentStatus(data, 'accept')}>Принять</Button>
+                                <Button type='primary' icon={<FaTimes />} size='small' danger onClick={() => updatedApppointmentStatus(data, 'cancel')}>Закрыть</Button>
                             </>
                         }
                     </div>
@@ -117,7 +117,7 @@ const DashboardPage = () => {
     const items = [
         {
             key: '1',
-            label: 'upcoming',
+            label: 'алдағы',
             children: <CustomTable
                 loading={isLoading}
                 columns={upcomingColumns}
@@ -129,7 +129,7 @@ const DashboardPage = () => {
         },
         {
             key: '2',
-            label: 'today',
+            label: 'бүгін',
             children: <CustomTable
                 loading={isLoading}
                 columns={upcomingColumns}

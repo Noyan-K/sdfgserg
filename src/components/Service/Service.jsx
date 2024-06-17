@@ -21,7 +21,7 @@ const Service = () => {
   return (
     <>
       <Header />
-      <SubHeader title="Service" subtitle="Lorem ipsum dolor sit amet consectetur adipisicing." />
+      <SubHeader title="Қызметтер" subtitle="Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын." />
 
       <div className="container" style={{ marginTop: 200, marginBottom: 100 }}>
         <div className="row">
@@ -31,8 +31,8 @@ const Service = () => {
                 <div className="card shadow border-0 mb-5">
                   <img src={img} alt="" className="img-fluid" style={{ maxHeight: '17rem', objectFit: 'cover' }} />
                   <div className="p-2">
-                    <h4 className="mt-4 mb-2">Child care</h4>
-                    <p className="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+                    <h4 className="mt-4 mb-2">Бала күтімі</h4>
+                    <p className="mb-4">Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                   </div>
                 </div>
               </div>
@@ -52,9 +52,9 @@ const Service = () => {
             <div className="col-lg-7">
               <div className="d-flex align-items-center">
                 <div className='mb-4 section-title text-center'>
-                  <h2 className='text-uppercase'>We are pleased to offer you the</h2>
-                  <p className='form-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sed.</p>
-                  <Link to={'/doctors'} className="btn-get-started scrollto">Get Started</Link>
+                  <h2 className='text-uppercase'>Біз сізге ұсынуға қуаныштымыз</h2>
+                  <p className='form-text'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
+                  <Link to={'/doctors'} className="btn-get-started scrollto">Бастау</Link>
                 </div>
 
               </div>

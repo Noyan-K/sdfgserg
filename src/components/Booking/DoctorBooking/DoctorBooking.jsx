@@ -76,7 +76,7 @@ const DoctorBooking = () => {
 
     let dContent = null;
     if (dIsLoading) dContent = <div>Loading ...</div>
-    if (!dIsLoading && dIsError) dContent = <div>Something went Wrong!</div>
+    if (!dIsLoading && dIsError) dContent = <div>Бірдеңе Дұрыс Болмады!</div>
     if (!dIsLoading && !dIsError && time.length === 0) dContent = <Empty children="Doctor Is not Available" />
     if (!dIsLoading && !dIsError && time.length > 0) dContent =
         <>
@@ -91,7 +91,7 @@ const DoctorBooking = () => {
 
     //What to render
     let content = null;
-    if (!isLoading && isError) content = <div>Something Went Wrong!</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады!</div>
     if (!isLoading && !isError && data?.id === undefined) content = <Empty />
     if (!isLoading && !isError && data?.id) content =
         <>
@@ -100,7 +100,7 @@ const DoctorBooking = () => {
                     <img src={img} alt="" />
                 </Link>
                 <div className='text-start'>
-                    <Link to={`/doctors/${data?.id}`} style={{ textDecoration: 'none' }}>Dr. {data?.firstName + ' ' + data?.lastName}</Link>
+                    <Link to={`/doctors/${data?.id}`} style={{ textDecoration: 'none' }}>Др. {data?.firstName + ' ' + data?.lastName}</Link>
                     <p className="form-text mb-0"><FaArchway /> {data?.specialization + ',' + data?.experienceHospitalName}</p>
                 </div>
             </div>
@@ -108,7 +108,7 @@ const DoctorBooking = () => {
 
     const steps = [
         {
-            title: 'Select Appointment Date & Time',
+            title: 'Кездесудің күні мен уақытын таңдаңыз',
             content: <SelectDateAndTime
                 content={content}
                 handleDateChange={handleDateChange}
@@ -119,11 +119,11 @@ const DoctorBooking = () => {
             />
         },
         {
-            title: 'Patient Information',
+            title: 'Науқас туралы ақпарат',
             content: <PersonalInformation handleChange={handleChange} selectValue={selectValue} setPatientId={setPatientId}/>
         },
         {
-            title: 'Payment',
+            title: 'Төлем',
             content: <CheckoutPage
                 handleChange={handleChange}
                 selectValue={selectValue}
@@ -167,7 +167,7 @@ const DoctorBooking = () => {
 
     useEffect(() => {
         if (createIsSuccess) {
-            message.success("Succcessfully Appointment Scheduled")
+            message.success("Кездесуді Жоспарлау Сәтті Өтті")
             setSelectValue(initialValue);
             dispatch(addInvoice({ ...appointmentData }))
             navigation(`/booking/success/${appointmentData.id}`)
@@ -185,10 +185,10 @@ const DoctorBooking = () => {
                 <div className='text-end mx-3' >
                     {current < steps.length - 1 && (<Button type="primary"
                         disabled={current === 0 ? (selectTime ? false : true) : IsdDisable || !selectTime}
-                        onClick={() => next()}>Next</Button>)}
+                        onClick={() => next()}>Келесі</Button>)}
 
-                    {current === steps.length - 1 && (<Button type="primary" disabled={IsConfirmDisable} loading={createIsLoading} onClick={handleConfirmSchedule}>Confirm</Button>)}
-                    {current > 0 && (<Button style={{ margin: '0 8px', }} onClick={() => prev()} >Previous</Button>)}
+                    {current === steps.length - 1 && (<Button type="primary" disabled={IsConfirmDisable} loading={createIsLoading} onClick={handleConfirmSchedule}>Растау</Button>)}
+                    {current > 0 && (<Button style={{ margin: '0 8px', }} onClick={() => prev()} >Алдыңғы</Button>)}
                 </div>
             </div>
             <Footer />

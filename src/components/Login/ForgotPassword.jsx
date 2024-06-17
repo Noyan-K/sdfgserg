@@ -27,7 +27,7 @@ const ForgotPassword = () => {
             message.error(error?.data?.message)
         }
         if (isSuccess) {
-            message.success('Successfully Password changed');
+            message.success('Құпия сөз сәтті өзгертілді');
             navigate("/login")
         }
     }, [isError, error, isSuccess, navigate])
@@ -43,21 +43,21 @@ const ForgotPassword = () => {
                                 onFinish={onFinish}
                                 autoComplete="off"
                             >
-                                <Form.Item label="Password" name="password" rules={[{ required: true, message: 'Please input your password!' }]}>
+                                <Form.Item label="Password" name="password" rules={[{ required: true, message: 'Құпия сөзіңізді енгізіңіз!' }]}>
                                     <Input.Password />
                                 </Form.Item>
 
-                                <Form.Item label="Re-enter Password" name="rePassword" rules={[{ required: true, message: 'Please re-enter your password!' }]}>
+                                <Form.Item label="Re-enter Password" name="rePassword" rules={[{ required: true, message: 'Құпия сөзіңізді қайтадан енгізіңіз!' }]}>
                                     <Input.Password />
                                 </Form.Item>
 
                                 <Form.Item>
                                     <Button type="primary" disabled={isLoading} htmlType="submit" loading={isLoading}>
-                                        Submit
+                                        Жіберу
                                     </Button>
                                 </Form.Item>
                             </Form>
-                            {!matchePass && <p className='text-danger'>Password is not Matched</p>}
+                            {!matchePass && <p className='text-danger'>Құпия сөз сәйкес келмейді</p>}
                         </div>
                     </div>
                 </div>

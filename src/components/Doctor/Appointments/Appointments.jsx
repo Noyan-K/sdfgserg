@@ -39,7 +39,7 @@ const Appointments = () => {
     }
 
     let content = null;
-    if (!isLoading && isError) content = <div>Something Went Wrong !</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады !</div>
     if (!isLoading && !isError && data?.length === 0) content = <Empty />
     if (!isLoading && !isError && data?.length > 0) content =
         <>
@@ -55,7 +55,7 @@ const Appointments = () => {
                                     <h5>{getInitPatientName()}</h5>
                                     <Tooltip title="Copy Tracking Id">
                                         <Button>
-                                            <h6>Tracking<Tag color="#87d068" className='ms-2 text-uppercase' onClick={() => clickToCopyClipBoard(item?.trackingId)}>{item?.trackingId}</Tag></h6>
+                                            <h6>Бақылау<Tag color="#87d068" className='ms-2 text-uppercase' onClick={() => clickToCopyClipBoard(item?.trackingId)}>{item?.trackingId}</Tag></h6>
                                         </Button>
                                     </Tooltip>
 
@@ -68,26 +68,26 @@ const Appointments = () => {
                                     </div>
                                 </div>
                                 <div className='appointment-status card p-3 border-primary'>
-                                    <p>Current Status - <span><Tag color="#f50" className='text-uppercase'>{item?.status}</Tag></span></p>
-                                    <p>Patient Status - <span><Tag color="#2db7f5" className='text-uppercase'>{item?.patientType}</Tag></span></p>
-                                    <p>Is Follow Up - <span><Tag color="#f50" className='text-uppercase'>{item?.isFollowUp ? "Yes" : "No"}</Tag></span></p>
-                                    <p> Is Paid - <span><Tag color="#87d068" className='text-uppercase'>{item?.paymentStatus}</Tag></span></p>
-                                    <p> Prescribed - <span><Tag color="#2db7f5" className='text-uppercase'>{item?.prescriptionStatus}</Tag></span></p>
+                                    <p>Ағымдағы Күй - <span><Tag color="#f50" className='text-uppercase'>{item?.status}</Tag></span></p>
+                                    <p>Науқастың Жағдайы - <span><Tag color="#2db7f5" className='text-uppercase'>{item?.patientType}</Tag></span></p>
+                                    <p>Жалғасы Бар Ма - <span><Tag color="#f50" className='text-uppercase'>{item?.isFollowUp ? "Yes" : "No"}</Tag></span></p>
+                                    <p> Ақылы - <span><Tag color="#87d068" className='text-uppercase'>{item?.paymentStatus}</Tag></span></p>
+                                    <p> Белгіленген - <span><Tag color="#2db7f5" className='text-uppercase'>{item?.prescriptionStatus}</Tag></span></p>
                                 </div>
                             </div>
                             <div className='d-flex gap-2'>
                                 <Link to={`/dashboard/appointments/${item?.id}`}>
-                                    <Button type="primary" icon={<FaEye />} size="small">View</Button>
+                                    <Button type="primary" icon={<FaEye />} size="small">қарау</Button>
                                 </Link>
                                 {
                                     item.prescriptionStatus === 'notIssued'
                                         ?
                                         <Link to={`/dashboard/appointment/treatment/${item?.id}`}>
-                                            <Button type="primary" icon={<FaBriefcaseMedical />} size="small">Treatment</Button>
+                                            <Button type="primary" icon={<FaBriefcaseMedical />} size="small">емдеу</Button>
                                         </Link>
                                         :
                                         <Link to={`/dashboard/prescription/${item?.prescription[0]?.id}`}>
-                                            <Button type="primary" icon={<FaEye />} size="small" >Prescription</Button>
+                                            <Button type="primary" icon={<FaEye />} size="small" >Рецепт</Button>
                                         </Link>
                                 }
                                 {
@@ -99,8 +99,8 @@ const Appointments = () => {
                                 {
                                     item?.status === 'pending' &&
                                     <>
-                                        <Button type="primary" icon={<FaCheck />} size="small" onClick={() => updatedApppointmentStatus(item.id, 'scheduled')}>Accept</Button>
-                                        <Button type='primary' icon={<FaTimes />} size="small" danger onClick={() => updatedApppointmentStatus(item.id, 'cancel')}>Cancel</Button>
+                                        <Button type="primary" icon={<FaCheck />} size="small" onClick={() => updatedApppointmentStatus(item.id, 'scheduled')}>қабылдау</Button>
+                                        <Button type='primary' icon={<FaTimes />} size="small" danger onClick={() => updatedApppointmentStatus(item.id, 'cancel')}>болдырмау</Button>
                                     </>
                                 }
                             </div>

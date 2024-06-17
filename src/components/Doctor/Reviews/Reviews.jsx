@@ -13,7 +13,7 @@ const Reviews = () => {
     const { data: loginInfo } = useAuthCheck();
     const { data, isError, isLoading } = useGetDoctorReviewsQuery(loginInfo?.id);
     let content = null;
-    if (!isLoading && isError) content = <div>Something Went Wrong !</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады !</div>
     if (!isLoading && !isError && data?.length === 0) content = <Empty />
     if (!isLoading && !isError && data?.length > 0) content =
         <>

@@ -81,7 +81,7 @@ const AppointmentPage = () => {
 
   useEffect(() => {
     if (isSuccess) {
-        message.success("Succcessfully Appointment Scheduled")
+        message.success("Кездесу сәтті өтті")
         setSelectValue(initialValue);
         dispatch(addInvoice({ ...appointmentData }))
         navigation(`/booking/success/${appointmentData?.id}`)
@@ -95,7 +95,7 @@ const AppointmentPage = () => {
 
   const steps = [
     {
-      title: 'Select Appointment Date & Time',
+      title: 'Кездесудің күні мен уақытын таңдаңыз',
       content: <SelectApppointment
         handleDateChange={handleDateChange}
         selectedDate={selectedDate}
@@ -104,11 +104,11 @@ const AppointmentPage = () => {
       />
     },
     {
-      title: 'Patient Information',
+      title: 'Науқас туралы ақпарат',
       content: <PersonalInformation handleChange={handleChange} selectValue={selectValue} setPatientId={setPatientId}/>
     },
     {
-      title: 'Payment',
+      title: 'Төлем',
       content: <CheckoutPage
         handleChange={handleChange}
         selectValue={selectValue}
@@ -137,10 +137,10 @@ const AppointmentPage = () => {
             {current < steps.length - 1 && (
               <Button type="primary" size="large"
                 disabled={current === 0 ? (selectTime ? false : true) : IsDisable || !selectTime}
-                onClick={() => next()}>Next</Button>)}
+                onClick={() => next()}>Келесі</Button>)}
 
-            {current === steps.length - 1 && (<Button type="primary" size="large" disabled={isConfirmDisable} loading={isLoading} onClick={handleConfirmSchedule}>Confirm</Button>)}
-            {current > 0 && (<Button style={{ margin: '0 8px', }} size="large" onClick={() => prev()} >Previous</Button>)}
+            {current === steps.length - 1 && (<Button type="primary" size="large" disabled={isConfirmDisable} loading={isLoading} onClick={handleConfirmSchedule}>Растау</Button>)}
+            {current > 0 && (<Button style={{ margin: '0 8px', }} size="large" onClick={() => prev()} >Алдыңғы</Button>)}
           </div>
         </div>
       </div>

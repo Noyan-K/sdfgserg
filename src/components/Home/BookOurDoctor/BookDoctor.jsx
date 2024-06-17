@@ -29,14 +29,14 @@ const BookDoctor = () => {
 			message.error(error?.data?.message)
 		}
 		if (isSuccess) {
-			message.success('Successfully Favourite Adde')
+			message.success('Таңдаулыларға сәтті қосылды')
 		}
 	}, [isSuccess, fIsError, FIsLoading, error?.data?.message])
 
 	// what to render 
 	let content = null;
-	if (!isLoading && isError) content = <div>Something Went Wrong !</div>
-	if (!isLoading && !isError && doctors?.length === 0) content = <div>Empty</div>
+	if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады !</div>
+	if (!isLoading && !isError && doctors?.length === 0) content = <div>Бос</div>
 	if (!isLoading && !isError && doctors?.length > 0) content =
 		<>
 			{
@@ -73,18 +73,18 @@ const BookDoctor = () => {
 								</div>
 								<ul className="available-info">
 									<li>
-										<FaLocationArrow className='icon' /> Georgia, USA
+										<FaLocationArrow className='icon' /> Актобе, Казахстан
 									</li>
 									<li>
-										<FaClock className='icon' /> Available on Fri, 22 Mar
+										<FaClock className='icon' /> Доступно в пятницу, 22 марта.
 									</li>
 									<li>
-										<FaDollarSign className='icon' /> $100 - $400
+										<FaDollarSign className='icon' /> 5000-200 000 KZT
 									</li>
 								</ul>
 								<div className="d-flex justify-content-between align-items-center">
-									<Link to={`/doctors/profile/${item?.id}`} className="btn  btn-outline-info btn-sm view-profile-btn">Profile</Link>
-									<Link to={`/booking/${item?.id}`} className="btn btn-sm book-btn">Book</Link>
+									<Link to={`/doctors/profile/${item?.id}`} className="btn  btn-outline-info btn-sm view-profile-btn">Профиль</Link>
+									<Link to={`/booking/${item?.id}`} className="btn btn-sm book-btn">Жазу</Link>
 								</div>
 							</div>
 						</div >
@@ -98,14 +98,14 @@ const BookDoctor = () => {
 				<div className="row">
 					<div className="col-12 col-md-3 col-lg-3">
 						<div className='mb-2 section-title text-center'>
-							<h2>Book Our Doctor</h2>
+							<h2>Біздің дәрігерге жазылыңыз</h2>
 							<p className='m-0 text-secondary'>Lorem ipsum dolor sit.</p>
 						</div>
 						<div className="form-text">
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-							<p>Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover  Various versions have evolved over the years, sometimes</p>
+							<p>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
+							<p>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын. Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
 							<div className='text-center text-md-start my-3 my-md-0'>
-								<Link to={'/doctors'} className='more-btn text-center text-md-start'>See More</Link>
+								<Link to={'/doctors'} className='more-btn text-center text-md-start'>Көбірек білу</Link>
 							</div>
 						</div>
 					</div>

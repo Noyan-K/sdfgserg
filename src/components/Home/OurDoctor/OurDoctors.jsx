@@ -8,7 +8,7 @@ const OurDoctors = () => {
     const doctors = data?.doctors;
 
     let content = null;
-    if (!isLoading && isError) content = <div>Something Went Wrong !</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады !</div>
     if (!isLoading && !isError && doctors?.length === 0) content = <div><Empty /></div>
     if (!isLoading && !isError && doctors?.length > 0) content =
         <>
@@ -38,8 +38,8 @@ const OurDoctors = () => {
         <section id="doctors" className="doctors">
             <div className="container">
                 <div className="section-title text-center mb-3">
-                    <h2>OUR DOCTORS</h2>
-                    <p className='form-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, adipisci?</p>
+                    <h2>БІЗДІҢ ДӘРІГЕРЛЕР</h2>
+                    <p className='form-text'>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                 </div>
 
                 <div className="row">

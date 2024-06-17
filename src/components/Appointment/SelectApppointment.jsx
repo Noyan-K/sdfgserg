@@ -20,23 +20,23 @@ const SelectApppointment = ({ selectedDate, handleDateChange, selectTime, setSel
             <dir className="p-3" style={{ background: '#f8f9fa' }}>
                 <div className="row">
                     <div className="col-md-3 col-sm-12 mt-3 info-part border-end">
-                        <p className='py-2 border-bottom info-head-date'>Would you like to schedule an Intervewi? Pick a Date & Time</p>
+                        <p className='py-2 border-bottom info-head-date'>Кездесуге жазылғыңыз келе ме? Күн мен уақытты таңдаңыз</p>
                         <div className='icon-box'>
                             <div className='d-flex gap-3'>
                                 <FaBriefcase className='icon' />
-                                <p>With Doctor</p>
+                                <p>Дәрігермен</p>
                             </div>
                             <div className='d-flex gap-3'>
                                 <FaRegClock className='icon' />
-                                <p>30 Min</p>
+                                <p>30 минут</p>
                             </div>
                             <div className='d-flex gap-3'>
                                 <FaLocationArrow className='icon' />
-                                <p>Sylhet, Bangladesh<br /><span className="form-text">1020BD, Amertam, NorthEast,Srimongol</span></p>
+                                <p>Актобе, Казахстан<br /><span className="form-text">Бр.Жубановых 14</span></p>
                             </div>
                             <div className='d-flex gap-3'>
                                 <FaLink className='icon' />
-                                <p>Zoom Meeting</p>
+                                <p>Google-конференция</p>
                             </div>
                             <div className='d-flex gap-3'>
                                 <FaCalendarAlt className='icon' />
@@ -47,7 +47,7 @@ const SelectApppointment = ({ selectedDate, handleDateChange, selectTime, setSel
 
                     <div className="col-md-5 col-sm-12 mt-3 border-end">
                         <p className='py-2 border-bottom info-head-date'>
-                            {selectedDate ? `Selected - ${moment(selectedDate).format('LL')}` : 'Pick a Time'}
+                            {selectedDate ? `Таңдалған - ${moment(selectedDate).format('LL')}` : 'Уақытты таңдаңыз'}
                         </p>
                         <div className='info-date-card row'>
                             {
@@ -65,11 +65,11 @@ const SelectApppointment = ({ selectedDate, handleDateChange, selectTime, setSel
                     </div>
                     <div className="col-md-4 col-sm-12 mt-3">
                         <p className='py-2 border-bottom info-head-date'>
-                            {selectTime ? `Selected -  ${selectTime} To ${moment(selectTime, 'hh:mm A').add(30, 'minutes').format('hh:mm A')}` : 'Pick a Time'}
+                            {selectTime ? `Таңдалған -  ${selectTime} дейін ${moment(selectTime, 'hh:mm A').add(30, 'minutes').format('hh:mm A')}` : 'Уақытты таңдаңыз'}
                         </p>
 
                         <div className='select-time-div'>
-                            <h4>Morning Time <span className='text-secondary'>(8AM - 12PM)</span></h4>
+                            <h4>Таңертеңгі уақыт <span className='text-secondary'>(8-12)</span></h4>
                             <div className="row text-center mt-3">
                                 {
                                     amTimeSlot.map((item, id) => (
@@ -82,7 +82,7 @@ const SelectApppointment = ({ selectedDate, handleDateChange, selectTime, setSel
                         </div>
 
                         <div className='select-time-div'>
-                            <h4>After Noon Time <span className='text-secondary'>(1PM - 5PM)</span></h4>
+                            <h4>Түстен кейін<span className='text-secondary'>(14:00 - 17:00)</span></h4>
                             <div className="row text-center mt-3">
                                 {
                                     pmTimeSlot.map((item, id) => (

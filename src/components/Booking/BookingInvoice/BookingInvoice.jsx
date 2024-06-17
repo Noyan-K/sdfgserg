@@ -17,7 +17,7 @@ const BookingInvoice = () => {
 
     let content = null;
     if (isLoading) content = <div>Loading ...</div>
-    if (!isLoading && isError) content = <div>Something went Wrong!</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады!</div>
     if (!isLoading && !isError && !data) content = <Empty />
     if (!isLoading && !isError && data) content =
         <>
@@ -32,8 +32,8 @@ const BookingInvoice = () => {
                             </div>
                             <div className="col-md-6">
                                 <p className="invoice-details">
-                                    <strong>Order:</strong> #00124 <br />
-                                    <strong>Issued:</strong> {moment(data.createdAt).format('LL')}
+                                    <strong>Тапсырыс:</strong> #00124 <br />
+                                    <strong>Берілген:</strong> {moment(data.createdAt).format('LL')}
                                 </p>
                             </div>
                         </div>
@@ -43,10 +43,10 @@ const BookingInvoice = () => {
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="invoice-info">
-                                    <strong className="customer-text">Invoice From</strong>
+                                    <strong className="customer-text">Шот-Фактура</strong>
                                     <p className="invoice-details invoice-details-two">
-                                        Dr. {data?.appointment?.doctor?.firstName ? `${data?.appointment?.doctor?.firstName} ${data?.appointment?.doctor?.lastName}`: ' Of DoctorOnCall'} <br />
-                                        {data?.appointment?.doctor?.address ? data?.appointment?.doctor?.address : "Sylhet, Dhaka ,BD,3214"}, {data?.appointment?.doctor?.city && data?.appointment?.doctor?.city},<br />
+                                        Др. {data?.appointment?.doctor?.firstName ? `${data?.appointment?.doctor?.firstName} ${data?.appointment?.doctor?.lastName}`: ' DoctorOnCall'} <br />
+                                        {data?.appointment?.doctor?.address ? data?.appointment?.doctor?.address : "Казахстан, Актобе, бр.Жубановых 8,3214"}, {data?.appointment?.doctor?.city && data?.appointment?.doctor?.city},<br />
                                         {data?.appointment?.doctor?.country && data?.appointment?.doctor?.country} <br />
                                     </p>
                                 </div>
@@ -67,7 +67,7 @@ const BookingInvoice = () => {
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="invoice-info">
-                                    <strong className="customer-text">Payment Method</strong>
+                                    <strong className="customer-text">Төлем Әдісі</strong>
                                     <p className="invoice-details invoice-details-two">
                                         {data?.paymentType} <br />
                                         XXXXXXXXXXXX-2541 <br />
@@ -84,18 +84,18 @@ const BookingInvoice = () => {
                                     <table className="invoice-table table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Description</th>
-                                                <th className="text-center">Doctor Fee</th>
-                                                <th className="text-center">VAT</th>
-                                                <th className="text-right">Total</th>
+                                                <th>Сипаттама</th>
+                                                <th className="text-center">Дәрігердің Ақысы</th>
+                                                <th className="text-center">Налог</th>
+                                                <th className="text-right">Барлығы</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>General Consultation</td>
-                                                <td className="text-center">${data?.DoctorFee}</td>
-                                                <td className="text-center">${data?.vat}</td>
-                                                <td className="text-right">${data?.totalAmount}</td>
+                                                <td>Жалпы Консультация</td>
+                                                <td className="text-center">KZT {data?.DoctorFee}</td>
+                                                <td className="text-center">KZT {data?.vat}</td>
+                                                <td className="text-right">KZT {data?.totalAmount}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -106,16 +106,16 @@ const BookingInvoice = () => {
                                     <table className="invoice-table-two table">
                                         <tbody>
                                             <tr>
-                                                <th>Subtotal:</th>
-                                                <td><span>${data?.totalAmount}</span></td>
+                                                <th>Барлығы:</th>
+                                                <td><span>KZT {data?.totalAmount}</span></td>
                                             </tr>
                                             <tr>
-                                                <th>Discount:</th>
+                                                <th>Жеңілдік:</th>
                                                 <td><span>0%</span></td>
                                             </tr>
                                             <tr>
-                                                <th>Total Amount:</th>
-                                                <td><span>${data?.totalAmount}</span></td>
+                                                <th>Жалпы Сомасы:</th>
+                                                <td><span>KZT {data?.totalAmount}</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -124,8 +124,8 @@ const BookingInvoice = () => {
                         </div>
                     </div>
                     <div className="other-info">
-                        <h4>Other information</h4>
-                        <p className="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed dictum ligula, cursus blandit risus. Maecenas eget metus non tellus dignissim aliquam ut a ex. Maecenas sed vehicula dui, ac suscipit lacus. Sed finibus leo vitae lorem interdum, eu scelerisque tellus fermentum. Curabitur sit amet lacinia lorem. Nullam finibus pellentesque libero.</p>
+                        <h4>Басқа ақпарат</h4>
+                        <p className="text-muted mb-0">Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                     </div>
 
                 </div>
@@ -139,7 +139,7 @@ const BookingInvoice = () => {
                     <ReactToPrint
                         bodyClass="print-agreement"
                         content={() => ref.current}
-                        trigger={() => (<Button type="primary" icon={<FaPrint />}> Print</Button>)}
+                        trigger={() => (<Button type="primary" icon={<FaPrint />}> Басып шығару</Button>)}
                     />
                 </div>
                 <div className="container-fluid" ref={ref}>

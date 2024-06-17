@@ -15,9 +15,9 @@ const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{} 
         if(checked){
             if(data.id){
                 setPatientId(data.id);
-                message.success("User Has Found !")
+                message.success("Пайдаланушы Тапты!")
             }else{
-                message.error("User is not Found, Please Login!")
+                message.error("Пайдаланушы Табылмады, Жүйеге кіріңіз!")
             }
         }
     }, [checked, data, setPatientId])
@@ -26,18 +26,18 @@ const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{} 
         <form className="rounded p-3 mt-5" style={{ background: "#f8f9fa" }}>
             <div className="row">
                 <Checkbox checked={checked} onChange={onChange}>
-                    Allready Have an Account ?
+                    Сізде есептік жазба бар ма?
                 </Checkbox>
 
                 <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
-                        <label>First Name</label>
+                        <label>Аты</label>
                         <input onChange={(e) => handleChange(e)} name='firstName' value={firstName && firstName} className="form-control" type="text" />
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
-                        <label>Last Name</label>
+                        <label>Тегі</label>
                         <input onChange={(e) => handleChange(e)} name='lastName' value={lastName && lastName} className="form-control" type="text" />
                     </div>
                 </div>
@@ -49,25 +49,25 @@ const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{} 
                 </div>
                 <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
-                        <label>Phone</label>
+                        <label>Телефон</label>
                         <input onChange={(e) => handleChange(e)} name='phone' value={phone && phone} className="form-control" type="text" />
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
-                        <label>Reason For Visit</label>
+                        <label>Келу Себебі</label>
                         <textarea rows={8} onChange={(e) => handleChange(e)} name='reasonForVisit' value={reasonForVisit && reasonForVisit} className="form-control" type="text" />
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
-                        <label>Description</label>
+                        <label>Сипаттамасы</label>
                         <textarea rows={8} onChange={(e) => handleChange(e)} name='description' value={description && description} className="form-control" type="text" />
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
-                        <label>Address</label>
+                        <label>Мекен-жайы</label>
                         <input onChange={(e) => handleChange(e)} name='address' value={address && address} className="form-control" type="text" />
                     </div>
                 </div>

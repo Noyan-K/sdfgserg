@@ -29,7 +29,7 @@ const CheckoutPage = ({ handleChange, selectValue, isCheck, setIsChecked, data, 
                                         checked={paymentType === 'creditCard'}
                                     />
                                     <span className="ms-2"></span>
-                                    Credit card
+                                    Несие картасы
                                 </label>
                             </div>
                             <div className="col-md-6 mb-2">
@@ -41,30 +41,30 @@ const CheckoutPage = ({ handleChange, selectValue, isCheck, setIsChecked, data, 
                                         checked={paymentType === 'cash'}
                                     />
                                     <span className="ms-2"></span>
-                                    Cash
+                                    Қолма-қол ақша
                                 </label>
                             </div>
                             <di mb-3v className="col-md-6">
                                 <div className="form-group card-label mb-3">
-                                    <label htmlFor="card_name">Name on Card</label>
+                                    <label htmlFor="card_name">Картадағы аты</label>
                                     <input className="form-control" id="card_name" value={nameOnCard && nameOnCard} type="text" onChange={(e) => handleChange(e)} name='nameOnCard' />
                                 </div>
                             </di>
                             <div className="col-md-6">
                                 <div className="form-group card-label mb-3">
-                                    <label htmlFor="card_number">Card Number</label>
+                                    <label htmlFor="card_number">Карта Нөмірі</label>
                                     <input className="form-control" id="card_number" value={cardNumber && cardNumber} placeholder="1234  5678  9876  5432" type="number" onChange={(e) => handleChange(e)} name='cardNumber' />
                                 </div>
                             </div>
                             <div className="col-md-4">
                                 <div className="form-group card-label mb-3">
-                                    <label htmlFor="expiry_month">Expiry Month</label>
+                                    <label htmlFor="expiry_month">Жарамдылық айы</label>
                                     <input className="form-control" id="expiry_month" value={expiredMonth && expiredMonth} placeholder="MM" type="number" onChange={(e) => handleChange(e)} name='expiredMonth' />
                                 </div>
                             </div>
                             <div className="col-md-4">
                                 <div className="form-group card-label mb-3">
-                                    <label htmlFor="expiry_year">Expiry Year</label>
+                                    <label htmlFor="expiry_year">Жарамдылық жылы</label>
                                     <input className="form-control" id="expiry_year" value={cardExpiredYear && cardExpiredYear} placeholder="YY" type="number" onChange={(e) => handleChange(e)} name='cardExpiredYear' />
                                 </div>
                             </div>
@@ -95,7 +95,7 @@ const CheckoutPage = ({ handleChange, selectValue, isCheck, setIsChecked, data, 
                                     checked={paymentMethod === 'payoneer'}
                                 />
                                 <span className="checkmark ms-3"></span>
-                                Payoneer
+                                Мир
                             </div>
                         </div>
                         <div className="terms-accept">
@@ -105,7 +105,7 @@ const CheckoutPage = ({ handleChange, selectValue, isCheck, setIsChecked, data, 
                                     id="terms_accept" className='me-2'
                                     checked={isCheck}
                                     onChange={handleCheck} />
-                                <label htmlFor="terms_accept"> I have read and accept <a className='text-primary' style={{ cursor: 'pointer', textDecoration: 'none' }}>Terms &amp; Conditions</a></label>
+                                <label htmlFor="terms_accept"> Мен оқыдым және қабылдадым <a className='text-primary' style={{ cursor: 'pointer', textDecoration: 'none' }}>Ережелер мен Шарттар</a></label>
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@ const CheckoutPage = ({ handleChange, selectValue, isCheck, setIsChecked, data, 
                         {data && <div className='doc-title-info mt-3 mb-3'>
                             <h5 className='mt-3 text-center' style={{
                                 fontSize: "22px", fontWeight: 700,
-                            }}>Dr. {data?.firstName + ' ' + data?.lastName}</h5>
+                            }}>Др. {data?.firstName + ' ' + data?.lastName}</h5>
                             <div className='text-center'>
                                 <p className='form-text mb-0'>{data?.designation}</p>
                                 <p className='form-text mb-0'>{data?.clinicAddress}</p>
@@ -128,19 +128,19 @@ const CheckoutPage = ({ handleChange, selectValue, isCheck, setIsChecked, data, 
 
                         <div className="booking-item-wrap">
                             <ul className="booking-date">
-                                <li>Date <span>{moment(selectedDate).format('LL')}</span></li>
-                                <li>Time <span>{selectTime}</span></li>
+                                <li>Күні <span>{moment(selectedDate).format('LL')}</span></li>
+                                <li>Уақыт <span>{selectTime}</span></li>
                             </ul>
                             <ul className="booking-fee">
-                                <li>Consulting Fee <span>${price}</span></li>
-                                <li>Booking Fee <span>$10</span></li>
-                                <li>Vat (Including 15%) <span>$ {vat}</span></li>
+                                <li>Консультациялық Төлем <span>KZT {price}</span></li>
+                                <li>Брондау Ақысы <span>KZT 10</span></li>
+                                <li>Налог (15%) <span>KZT {vat}</span></li>
                             </ul>
 
                             <ul className="booking-total">
                                 <li className='d-flex justify-content-between'>
-                                    <span className='fw-bold'>Total</span>
-                                    <span className="total-cost" style={{ color: '#1977cc' }}>${(Number(price) + 10 + vat)}</span>
+                                    <span className='fw-bold'>Барлығы</span>
+                                    <span className="total-cost" style={{ color: '#1977cc' }}>KZT {(Number(price) + 10 + vat)}</span>
                                 </li>
                             </ul>
                         </div>

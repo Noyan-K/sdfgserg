@@ -35,15 +35,15 @@ const BookingSuccess = () => {
 
                             <div className='border-bottom my-2'>
                                 <FaCalendarCheck style={{ fontSize: '2.5rem' }} className='text-success' />
-                                <h6 className='py-2'>Meeting is scheduled</h6>
-                                <p className='text-secondary border rounded-pill form-text text-success border-success'>Check your Inbox an email with all details!</p>
+                                <h6 className='py-2'>Кездесу жоспарланған</h6>
+                                <p className='text-secondary border rounded-pill form-text text-success border-success'>Кіріс Жәшігіңізді тексеріңіз барлық мәліметтері бар электрондық пошта!</p>
                             </div>
 
 
                             <div>
-                                <Tooltip title="Copy Tracking Id">
+                                <Tooltip title="Бақылау Идентификаторын Көшіру">
                                     <Button>
-                                        <h6>Tracking<Tag color="#87d068" className='ms-2 text-uppercase' onClick={() => clickToCopyClipBoard(data?.trackingId)}>{data?.trackingId}</Tag></h6>
+                                        <h6>Бақылау<Tag color="#87d068" className='ms-2 text-uppercase' onClick={() => clickToCopyClipBoard(data?.trackingId)}>{data?.trackingId}</Tag></h6>
                                     </Button>
                                 </Tooltip>
                             </div>
@@ -52,23 +52,23 @@ const BookingSuccess = () => {
                             <div className='card border-0 p-3 rounded mb-5'>
                                 <div className='d-flex gap-3 mb-2 align-items-center'>
                                     <FaAlignLeft style={{ fontSize: '1rem' }}/>
-                                    <Link to={`/dashboard/appointments/${id}`}><h5 className='text-primary'>View Appointment Details</h5></Link>
+                                    <Link to={`/dashboard/appointments/${id}`}><h5 className='text-primary'>Кездесу Мәліметтерін Қарау</h5></Link>
                                 </div>
                                 <div className='d-flex gap-3 mb-1'>
                                     <FaBriefcase style={{ fontSize: '1rem' }} />
-                                    <p>With Doctor</p>
+                                    <p>Дәрігермен</p>
                                 </div>
                                 <div className='d-flex gap-3 mb-1'>
                                     <FaRegClock style={{ fontSize: '1rem' }} />
-                                    <p>30 Min</p>
+                                    <p>30 мин</p>
                                 </div>
                                 <div className='d-flex gap-3 mb-1'>
                                     <div><FaLocationArrow style={{ fontSize: '1rem' }} /></div>
-                                    <p className='text-start'>Sylhet, Bangladesh<br /><span className="form-text">1020BD, Amertam, NorthEast,Srimongol</span></p>
+                                    <p className='text-start'>Казахстан, Актобе<br /><span className="form-text">Бр. Жубановых 8</span></p>
                                 </div>
                                 <div className='d-flex gap-3 mb-2'>
                                     <div><FaLink style={{ fontSize: '1rem' }} /></div>
-                                    <div><a href='https://meet.google.com/udx-kieq-sng' target='_blank' rel='noreferrer'>https://meet.google.com/udx-kieq-sng</a></div>
+                                    <div><a href='https://meet.google.com/xjq-dbft-emb' target='_blank' rel='noreferrer'>https://meet.google.com/xjq-dbft-emb</a></div>
                                 </div>
                                 <div className='d-flex gap-3'>
                                     <div><FaCalendarAlt style={{ fontSize: '1rem' }} /> </div>
@@ -79,7 +79,7 @@ const BookingSuccess = () => {
                         :
                         <div className='rounded p-3 d-flex flex-column justify-content-center align-items-center' style={{ background: "#f8f9fa", marginTop: '8rem', marginBottom: '5rem' }} >
                             <Empty />
-                            <h6 className='p-2 my-3'>You will be redirect to homepage !</h6>
+                            <h6 className='p-2 my-3'>Сіз басты бетке бағытталасыз!</h6>
                         </div>
                 }
             </div>

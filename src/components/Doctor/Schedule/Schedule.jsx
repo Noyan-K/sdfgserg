@@ -99,7 +99,7 @@ const Schedule = () => {
             message.error(error?.data?.message)
         }
         if (isSuccess) {
-            message.success('Successfully Add Time Slots')
+            message.success('Уақыт аралығы сәтті қосылды')
         }
     }, [isSuccess, AIsError, error?.data?.message, AIsLoading])
 
@@ -140,7 +140,7 @@ const Schedule = () => {
     }
 
     let content = null;
-    if (!isLoading && isError) content = <div>Something Went Wrong !</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады !</div>
     if (!isLoading && !isError && data?.length === 0) content = <Empty />
     if (!isLoading && !isError && data?.length > 0) content =
         <>
@@ -167,7 +167,7 @@ const Schedule = () => {
         <>
             <DashboardLayout>
                 <div className="w-100 mb-3 rounded p-3" style={{ background: '#f8f9fa', height:'90vh' }}>
-                    <h5 className='text-title'>Schedule Timings</h5>
+                    <h5 className='text-title'>Кесте Мерзімдері</h5>
                     <TabForm content={content} data={data} handleOnSelect={handleOnSelect} showEditModal={showEditModal} showModal={showModal} />
                 </div>
             </DashboardLayout >
@@ -185,13 +185,13 @@ const Schedule = () => {
                                         <div className="row form-row">
                                             <div className="col-12 col-md-6">
                                                 <div className="form-group">
-                                                    <label>Start Time</label>
+                                                    <label>Басталу уақыты</label>
                                                     <TimePicer handleFunction={handleEditStartTime} time={item.startTime} id={item.id} />
                                                 </div>
                                             </div>
                                             <div className="col-12 col-md-6">
                                                 <div className="form-group">
-                                                    <label>End Time</label>
+                                                    <label>Аяқталу уақыты</label>
                                                     <TimePicer handleFunction={handleEditEndTime} time={item.startTime} id={item.id} />
                                                 </div>
                                             </div>
@@ -207,13 +207,13 @@ const Schedule = () => {
 
                     <div className=" my-2 w-25">
                         <Button type="primary" size='small' htmlType="submit" onClick={(e) => addField(e)} block icon={<FaPlus />}>
-                            Add More
+                            Қосымша қосу
                         </Button>
                     </div>
                 </form>
             </UseModal>
 
-            <UseModal title="Add Time Slots" isModaOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}>
+            <UseModal title="Уақыт ұяшықтарын қосыңыз" isModaOpen={isModalOpen} handleOk={handleOk} handleCancel={handleCancel}>
                 <form>
                     <div className="hours-info">
                         <div className="row form-row hours-cont">
@@ -223,13 +223,13 @@ const Schedule = () => {
                                         <div className="row form-row">
                                             <div className="col-12 col-md-6">
                                                 <div className="form-group">
-                                                    <label>Start Time</label>
+                                                    <label>Басталу уақыты</label>
                                                     <TimePicer handleFunction={handleStartTime} time={item.startTime} id={item.id} />
                                                 </div>
                                             </div>
                                             <div className="col-12 col-md-6">
                                                 <div className="form-group">
-                                                    <label>End Time</label>
+                                                    <label>Аяқталу уақыты</label>
                                                     <TimePicer handleFunction={handleEndTime} time={item.endTime} id={item.id} />
                                                 </div>
                                             </div>
@@ -244,7 +244,7 @@ const Schedule = () => {
 
                     <div className=" my-2 w-25">
                         <Button type="primary" size='small' htmlType="submit" onClick={(e) => addInAddTimeSlot(e)} block icon={<FaPlus />}>
-                            Add More
+                            Қосымша қосу
                         </Button>
                     </div>
                 </form>

@@ -29,7 +29,7 @@ const Blog = () => {
     const meta = data?.meta
 
     let content = null;
-    if (!isLoading && isError) content = <div>{message.error('Something went Wrong!')}</div>
+    if (!isLoading && isError) content = <div>{message.error('Бірдеңе дұрыс болмады!')}</div>
     if (!isLoading && !isError && blogData?.length === 0) content = <Empty />
     if (!isLoading && !isError && blogData?.length > 0) content =
         <>
@@ -63,7 +63,7 @@ const Blog = () => {
                                 </div>
                                 <div className="mt-1 mb-3 text-start">
                                     <Link to={`/blog/${item?.id}`}>
-                                        <button className="btn btn-link border-0" style={{ color: '#1977cc' }}>Read More</button>
+                                        <button className="btn btn-link border-0" style={{ color: '#1977cc' }}>Толығырақ</button>
                                     </Link>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@ const Blog = () => {
     return (
         <>
             <Header />
-            <SubHeader title='Blog' subtitle='Lorem ipsum dolor sit amet.' />
+            <SubHeader title='Блог' subtitle='Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.' />
 
             <div className="container-fluid" style={{ marginTop: 150, marginBottom: 100 }}>
                 <div className="row">

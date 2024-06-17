@@ -9,21 +9,21 @@ import './index.css';
 import moment from 'moment';
 
 const categories = [
-    "Professional Development",
-    "Global Health Perspectives",
-    "Professional Development",
-    "Mental Health Awareness",
-    "Pediatric Care",
-    "Women's Health",
-    "Nutrition and Dietetics",
-    "Medical Education and Training"
+    "Кәсіби даму",
+    "Денсаулық сақтаудың жаһандық перспективалары",
+    "Кәсіби даму",
+    "Психикалық денсаулық туралы хабардар болу",
+    "Балаларға көмек",
+    "Әйелдер денсаулығы",
+    "Тамақтану және диетология",
+    "Медициналық Білім және дайындық"
 ]
 
 const BlogAside = ({ setSearchTerm }) => {
     const { data, isError, isLoading } = useGetAllBlogsQuery({ limit: 4 });
     const blogData = data?.blogs
     let content = null;
-    if (!isLoading && isError) content = <div>{message.error('Something went Wrong!')}</div>
+    if (!isLoading && isError) content = <div>{message.error('Бірдеңе дұрыс болмады!')}</div>
     if (!isLoading && !isError && blogData?.length === 0) content = <Empty />
     if (!isLoading && !isError && blogData?.length > 0) content =
         <>
@@ -56,12 +56,12 @@ const BlogAside = ({ setSearchTerm }) => {
         <div className='p-3' style={{ background: '#f8f9fa' }}>
 
             <div className="mb-4">
-                <h5 className="blog-title">SEARCH</h5>
-                <Search placeholder="Search" onChange={(e) => setSearchTerm(e.target.value)} style={{ width: "100%" }} />
+                <h5 className="blog-title">Іздеу</h5>
+                <Search placeholder="Іздеу" onChange={(e) => setSearchTerm(e.target.value)} style={{ width: "100%" }} />
             </div>
 
             <div className="mb-4">
-                <h5 className="blog-title">CATEGORIES</h5>
+                <h5 className="blog-title">Санаттар</h5>
                 {
                     categories.map((item, index) => (
                         <div className="my-2 d-flex gap-2 align-items-center categories-title" key={index}>
@@ -72,12 +72,12 @@ const BlogAside = ({ setSearchTerm }) => {
             </div>
 
             <div className="mb-4">
-                <h5 className="blog-title">RECEN POSTS</h5>
+                <h5 className="blog-title">СОҢҒЫ ЖАЗБАЛАР</h5>
                 {content}
             </div>
 
             <div className="mb-4">
-                <h5 className="mb-3" style={{ fontWeight: '900' }}>TAGS</h5>
+                <h5 className="mb-3" style={{ fontWeight: '900' }}>ТЕГТЕР</h5>
                 <div className="d-flex flex-wrap gap-3">
                     {
                         Array(6).fill(null).map((_item, index) => (

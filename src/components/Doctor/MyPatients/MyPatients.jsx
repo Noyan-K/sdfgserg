@@ -14,7 +14,7 @@ const MyPatients = () => {
     }
     const { data, isLoading, isError } = useGetDoctorPatientsQuery();
     let content = null;
-    if (!isLoading && isError) content = <div>Something Went Wrong !</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады !</div>
     if (!isLoading && !isError && data?.length === 0) content = <Empty/>
     if (!isLoading && !isError && data?.length > 0) content =
         <>

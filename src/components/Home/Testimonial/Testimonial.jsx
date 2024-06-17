@@ -10,8 +10,8 @@ import { Navigation, Autoplay } from 'swiper/modules';
 const Testimonial = () => {
     const { data, isLoading, isError } = useGetAllReviewsQuery({});
     let content = null;
-    if (!isLoading && isError) content = <div>Something Went Wrong !</div>
-    if (!isLoading && !isError && data?.length === 0) content = <div>Empty</div>
+    if (!isLoading && isError) content = <div>Бірдеңе Дұрыс Болмады !</div>
+    if (!isLoading && !isError && data?.length === 0) content = <div>Бос</div>
     if (!isLoading && !isError && data?.length > 0) content =
         <>
             {
@@ -29,7 +29,7 @@ const Testimonial = () => {
 
                             <p className="text-start text-secondary" style={{minHeight:'72px', overflow:'hidden'}}> {truncate(item?.description, 150)}</p>
                             <div>
-                                <p className='recomended'><FaCheckDouble /> Recomended</p>
+                                <p className='recomended'><FaCheckDouble /> Ұсынылған</p>
                                 <StarRatings
                                     rating={5}
                                     starRatedColor="#f4c150"
@@ -48,8 +48,8 @@ const Testimonial = () => {
     return (
         <div className="container" style={{ marginTop: "10rem", marginBottom: "10rem" }}>
             <div className='mb-5 section-title text-center'>
-                <h2>TESTIMONIAL</h2>
-                <p className='m-0 text-secondary'>What Our Patients Says.</p>
+                <h2>Пікір</h2>
+                <p className='m-0 text-secondary'>Біздің пациенттер не дейді.</p>
             </div>
             <div className="row d-flex justify-content-center">
                 <Swiper

@@ -10,24 +10,24 @@ const ChangePassword = () => {
                 <form className='container row form-row px-5 mx-auto my-5'>
                     <div className="col-md-12">
                         <div className="form-group mb-3 card-label">
-                            <label>Old Password</label>
-                            <input type="password" placeholder='Old Password' className="form-control" />
+                            <label>Ескі Пароль</label>
+                            <input type="password" placeholder='Ескі Пароль' className="form-control" />
                         </div>
                     </div>
                     <div className="col-md-12">
                         <div className="form-group mb-3 card-label">
-                            <label>New Password</label>
-                            <input type="password" placeholder='New Password' className="form-control" />
+                            <label>Жаңа Пароль</label>
+                            <input type="password" placeholder='Жаңа Пароль' className="form-control" />
                         </div>
                     </div>
                     <div className="col-md-12">
                         <div className="form-group mb-2 card-label">
-                            <label>Confirm Password</label>
-                            <input type="password" placeholder='Confirm Password' className="form-control" />
+                            <label>Құпия Сөзді Растау</label>
+                            <input type="password" placeholder='Құпия Сөзді Растау' className="form-control" />
                         </div>
                     </div>
                     <div className='mt-5 text-center'>
-                        <Button htmlType='submit' type="primary" size='large'>Save Changes</Button>
+                        <Button htmlType='submit' type="primary" size='large'>Өзгерістерді Сақтау</Button>
                     </div>
                 </form>
             </div>

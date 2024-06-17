@@ -62,7 +62,7 @@ const DoctorProfileSetting = () => {
     return (
         <div style={{ marginBottom: '10rem' }}>
             <div className="w-100 mb-3 rounded mb-5 p-2" style={{ background: '#f8f9fa' }}>
-                <h5 className="text-title mb-2 mt-3">Update Your Information</h5>
+                <h5 className="text-title mb-2 mt-3">Ақпаратыңызды жаңартыңыз</h5>
                 <form className="row form-row" onSubmit={handleSubmit(onSubmit)}>
                     <div className="col-md-12 mb-5">
                         <div className="form-group">
@@ -79,14 +79,14 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-6">
                         <div className="form-group mb-2 card-label">
-                            <label>First Name <span className="text-danger">*</span></label>
+                            <label>Аты <span className="text-danger">*</span></label>
                             <input defaultValue={data?.firstName} {...register("firstName")} className="form-control" />
                         </div>
                     </div>
 
                     <div className="col-md-6">
                         <div className="form-group mb-2 card-label">
-                            <label>Last Name <span className="text-danger">*</span></label>
+                            <label>Тегі <span className="text-danger">*</span></label>
                             <input defaultValue={data?.lastName} {...register("lastName")} className="form-control" />
                         </div>
                     </div>
@@ -101,19 +101,18 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-6">
                         <div className="form-group mb-2 card-label">
-                            <label>Phone Number</label>
+                            <label>Телефон Нөмірі</label>
                             <input defaultValue={data?.phone} {...register("phone")} className="form-control" />
                         </div>
                     </div>
 
                     <div className="col-md-6">
                         <div className="form-group mb-2 card-label">
-                            <label>Gender</label>
-                            <select className="form-control select" onChange={handleChange} name='gender'>
+                            <label>Жынысы</label>
+                            <select className="form-control select" onChange={handleChange} name='Gender'>
                                 <option value={''}>Select</option>
                                 <option className='text-capitalize'>male</option>
                                 <option className='text-capitalize'>female</option>
-                                <option className='text-capitalize'>shemale</option>
                             </select>
                         </div>
                     </div>
@@ -128,9 +127,9 @@ const DoctorProfileSetting = () => {
                     <div className="col-md-12">
                         <div className="card mb-2 mt-2">
                             <div className="card-body">
-                                <h6 className="card-title text-secondary">About Me</h6>
+                                <h6 className="card-title text-secondary">Мен туралы</h6>
                                 <div className="form-group mb-2 card-label">
-                                    <label>Biography</label>
+                                    <label>Өмірбаяны</label>
                                     <textarea defaultValue={data?.biography} {...register("biography")} className="form-control" rows={5} />
                                 </div>
                             </div>
@@ -139,18 +138,18 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-12">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Clinic Info</h6>
+                            <h6 className="card-title text-secondary">Клиника туралы ақпарат</h6>
                             <div className="row form-row">
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>Clinic Name</label>
+                                        <label>Клиника атауы</label>
                                         <input defaultValue={data?.clinicName} {...register("clinicName")} className="form-control" rows={5} />
                                     </div>
                                 </div>
 
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>Clinic Address</label>
+                                        <label>Клиника мекенжайы</label>
                                         <input type="text" defaultValue={data?.clinicAddress} {...register("clinicAddress")} className="form-control" />
                                     </div>
                                 </div>
@@ -161,37 +160,37 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-12">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Contact Details</h6>
+                            <h6 className="card-title text-secondary">Байланыс деректері</h6>
                             <div className="row form-row">
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>Address Line</label>
+                                        <label>Мекенжай</label>
                                         <input defaultValue={data?.address} {...register("address")} className="form-control" />
                                     </div>
                                 </div>
 
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>City</label>
+                                        <label>Қала</label>
                                         <input defaultValue={data?.city} {...register("city")} className="form-control" />
                                     </div>
                                 </div>
 
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>State / Province</label>
+                                        <label>Облыс</label>
                                         <input defaultValue={data?.state} {...register("state")} className="form-control" />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>Country</label>
+                                        <label>Ел</label>
                                         <input defaultValue={data?.country} {...register("country")} className="form-control" />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>Postal Code</label>
+                                        <label>Пошта Индексі</label>
                                         <input defaultValue={data?.postalCode} {...register("postalCode")} className="form-control" />
                                     </div>
                                 </div>
@@ -201,12 +200,12 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-12">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Pricing</h6>
+                            <h6 className="card-title text-secondary">Баға белгілеу</h6>
 
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>30 Min Fee</label>
+                                        <label>30 мин төлем</label>
                                         <input defaultValue={data?.price} {...register("price")} type='number' className="form-control" />
                                     </div>
                                 </div>
@@ -216,10 +215,10 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-12">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Services and Specialization</h6>
+                            <h6 className="card-title text-secondary">Қызметтер және мамандандыру</h6>
                             <div className="row form-row">
                                 <div className="form-group mb-2 card-label">
-                                    <label>Services</label>
+                                    <label>Қызметтер</label>
                                     <Select
                                         mode="multiple"
                                         allowClear
@@ -229,12 +228,12 @@ const DoctorProfileSetting = () => {
                                         onChange={setSelectedItems}
                                         options={doctorSpecialistOptions}
                                     />
-                                    <small className="form-text text-muted">Note : Type & Press enter to add new services</small>
+                                    <small className="form-text text-muted">Ескертпе: Жаңа қызметтерді қосу үшін теріп, enter пернесін басыңыз</small>
                                 </div>
                                 <div className="form-group mb-2 card-label">
-                                    <label>Specialization </label>
+                                    <label>Мамандық</label>
                                     <input defaultValue={data?.specialization} {...register("specialization")} className="input-tags form-control" placeholder="Enter Specialization" />
-                                    <small className="form-text text-muted">Note : Type & Press  enter to add new specialization</small>
+                                    <small className="form-text text-muted">Note : Type & Press  enter to add new Мамандық</small>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +241,7 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-12">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Education</h6>
+                            <h6 className="card-title text-secondary">Білімі</h6>
                             <div className="row form-row">
                                 <div className="col-12 col-md-6 col-lg-4">
                                     <div className="form-group mb-2 card-label">
@@ -269,7 +268,7 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-12">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Experience</h6>
+                            <h6 className="card-title text-secondary">Тәжірибе</h6>
                             <div className="row form-row">
                                 <div className="col-12 col-md-6 col-lg-4">
                                     <div className="form-group mb-2 card-label">
@@ -301,11 +300,11 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-12">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Awards</h6>
+                            <h6 className="card-title text-secondary">Марапаттары</h6>
                             <div className="row form-row">
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>Awards</label>
+                                        <label>Марапаттары</label>
                                         <input defaultValue={data?.award} {...register("award")} className="form-control" />
                                     </div>
                                 </div>
@@ -321,11 +320,11 @@ const DoctorProfileSetting = () => {
 
                     <div className="col-md-12">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Registrations</h6>
+                            <h6 className="card-title text-secondary">Тіркеулер</h6>
                             <div className="row form-row">
                                 <div className="col-md-6">
                                     <div className="form-group mb-2 card-label">
-                                        <label>Registrations</label>
+                                        <label>Тіркеулер</label>
                                         <input defaultValue={data?.registration} {...register("registration")} className="form-control" />
                                     </div>
                                 </div>
@@ -341,7 +340,7 @@ const DoctorProfileSetting = () => {
 
                     <div className='text-center my-3'>
                         <Button htmlType='submit' type="primary" size='large' loading={isLoading} disabled={isLoading ? true : false} >
-                            {isLoading ? 'Saving ...' : 'Save Changes'}
+                            {isLoading ? 'Saving ...' : 'Өзгерістерді Сақтау'}
                         </Button>
                     </div>
                 </form>

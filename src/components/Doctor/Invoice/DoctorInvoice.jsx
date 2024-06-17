@@ -12,7 +12,7 @@ const DoctorInvoice = () => {
     const { data, isLoading } = useGetDoctorInvoicesQuery();
     const columns = [
         {
-            title: 'Patient Name',
+            title: 'Науқастың аты',
             key: '1',
             width: 150,
             render: function (data) {
@@ -29,7 +29,7 @@ const DoctorInvoice = () => {
             }
         },
         {
-            title: 'Paid',
+            title: 'Төленген',
             key: '2',
             width: 100,
             render: function (data) {
@@ -37,7 +37,7 @@ const DoctorInvoice = () => {
             }
         },
         {
-            title: 'Paid On',
+            title: 'Төленді',
             key: '3',
             width: 100,
             render: function (data) {
@@ -45,19 +45,19 @@ const DoctorInvoice = () => {
             }
         },
         {
-            title: <div className='text-nowrap'>Payment Method</div>,
+            title: <div className='text-nowrap'>Төлем әдісі</div>,
             key: '4',
             width: 150,
             dataIndex: "paymentMethod"
         },
         {
-            title: <div className='text-nowrap'>Payment Type</div>,
+            title: <div className='text-nowrap'>Төлем әдісі</div>,
             key: '4',
             width: 120,
             dataIndex: "paymentType"
         },
         {
-            title: 'Action',
+            title: 'Әрекет',
             key: '5',
             width: 100,
             render: function (data) {

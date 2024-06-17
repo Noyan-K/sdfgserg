@@ -38,7 +38,7 @@ const Blogs = () => {
 
     const columns = [
         {
-            title: 'Title',
+            title: 'Заголовок',
             sorter: true,
             key: 1,
             render: function (data) {
@@ -46,7 +46,7 @@ const Blogs = () => {
             }
         },
         {
-            title: 'Description',
+            title: 'Описание',
             sorter: true,
             key: 2,
             render: function (data) {
@@ -54,7 +54,7 @@ const Blogs = () => {
             }
         },
         {
-            title: 'createdAt',
+            title: 'құрылған уақыты',
             dataIndex: 'createdAt',
             key: 3,
             sorter: true,
@@ -63,7 +63,7 @@ const Blogs = () => {
             }
         },
         {
-            title: 'Action',
+            title: 'Әрекет',
             key: 4,
             render: function (data) {
                 return (
@@ -118,7 +118,7 @@ const Blogs = () => {
         <DashboardLayout>
             <div className="w-100 mb-3 rounded" style={{ background: '#f8f9fa' }}>
                 <Link to={`/dashboard/blogs/create`} className='d-flex justify-content-end p-3'>
-                    <Button type="primary" size='middle'>Add Blog</Button>
+                    <Button type="primary" size='middle'>Жаңа Блог</Button>
                 </Link>
 
                 <CustomTable

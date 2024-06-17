@@ -14,7 +14,7 @@ const AppointmentTimeLine = ({data}) => {
                   <div className="timeline-badge bg-white"></div>
                   <div className="timeline-panel position-relative shadow rounded p-2" style={{maxWidth:'220px'}}>
                     <div>
-                      <h6>Payment - {data?.paymentStatus}</h6>
+                      <h6>Төлем - {data?.paymentStatus}</h6>
                       <p className="form-text mb-0">{appointStatusDsc?.payment}</p>
                     </div>
                   </div>
@@ -24,7 +24,7 @@ const AppointmentTimeLine = ({data}) => {
                   <div className="timeline-badge bg-white"></div>
                   <div className="timeline-panel position-relative shadow rounded p-2" style={{maxWidth:'220px'}}>
                     <div>
-                      <h6>Appointment - {data?.status}</h6>
+                      <h6>Тағайындау - {data?.status}</h6>
                       <p className="form-text mb-0">{appointStatusDsc.appointment[data?.status]}</p>
                     </div>
                   </div>
@@ -34,7 +34,7 @@ const AppointmentTimeLine = ({data}) => {
                   <div className="timeline-badge bg-white"></div>
                   <div className="timeline-panel position-relative shadow rounded p-2" style={{maxWidth:'220px'}}>
                     <div>
-                      <h6>Follow-up Date - {data?.followUp ? data?.followUp : 'Not Scheduled Yet'}</h6>
+                      <h6>Бақылау Күні - {data?.followUp ? data?.followUp : 'Әлі Жоспарланған Жоқ'}</h6>
                       <p className="form-text mb-0">{data?.followUp && appointStatusDsc.followUpDate}</p>
                     </div>
                   </div>
@@ -44,7 +44,7 @@ const AppointmentTimeLine = ({data}) => {
                   <div className="timeline-badge bg-white"></div>
                   <div className="timeline-panel position-relative shadow rounded p-2" style={{maxWidth:'220px'}}>
                     <div>
-                      <h6>Prescription - {data?.prescriptionStatus}</h6>
+                      <h6>Рецепт бойынша - {data?.prescriptionStatus}</h6>
                       <p className="form-text mb-0">{appointStatusDsc.prescriptionStatus[data?.prescriptionStatus]}</p>
                     </div>
                   </div>

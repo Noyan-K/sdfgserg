@@ -15,43 +15,43 @@ const Availibility = () => {
                             </div>
                         </div>
                         <div className="listing-day">
-                            <div className="day">Monday</div>
+                            <div className="day">ДҮЙСЕНБІ</div>
                             <div className="time-items">
                                 <span className="time">07:00 AM - 09:00 PM</span>
                             </div>
                         </div>
                         <div className="listing-day">
-                            <div className="day">Tuesday</div>
+                            <div className="day">СЕЙСЕНБІ</div>
                             <div className="time-items">
                                 <span className="time">07:00 AM - 09:00 PM</span>
                             </div>
                         </div>
                         <div className="listing-day">
-                            <div className="day">Wednesday</div>
+                            <div className="day">СӘРСЕНБІ</div>
                             <div className="time-items">
                                 <span className="time">07:00 AM - 09:00 PM</span>
                             </div>
                         </div>
                         <div className="listing-day">
-                            <div className="day">Thursday</div>
+                            <div className="day">БЕЙСЕНБІ</div>
                             <div className="time-items">
                                 <span className="time">07:00 AM - 09:00 PM</span>
                             </div>
                         </div>
                         <div className="listing-day">
-                            <div className="day">Friday</div>
+                            <div className="day">ЖҰМА</div>
                             <div className="time-items">
                                 <span className="time">07:00 AM - 09:00 PM</span>
                             </div>
                         </div>
                         <div className="listing-day">
-                            <div className="day">Saturday</div>
+                            <div className="day">СЕНБІ</div>
                             <div className="time-items">
                                 <span className="time">07:00 AM - 09:00 PM</span>
                             </div>
                         </div>
                         <div className="listing-day closed">
-                            <div className="day">Sunday</div>
+                            <div className="day">ЖЕКСЕНБІ</div>
                             <div className="time-items">
                                 <span className="time"><span className="badge bg-danger-light">Closed</span></span>
                             </div>

@@ -64,14 +64,14 @@ const SearchContent = ({ data }) => {
                     <div className="clini-infos">
                         <ul>
                             <li><FaRegThumbsUp />  97%</li>
-                            <li><FaComment /> 4 Feedback</li>
+                            <li><FaComment /> 4 Кері байланыс</li>
                             <li><FaLocationArrow />{truncate(data?.clinicAddress, 20)}</li>
-                            <li><FaDollarSign /> {data?.price ? truncate(data?.price, 4) : 60} (Per Hour)</li>
+                            <li><FaDollarSign /> {data?.price ? truncate(data?.price, 4) : 60} (сағатына)</li>
                         </ul>
                     </div>
                     <div className="clinic-booking">
-                        <Link to={`/doctors/profile/${data?.id}`} className="view-pro-btn">View Profile</Link>
-                        <Link to={`/booking/${data?.id}`} className="apt-btn">Book Appointment</Link>
+                        <Link to={`/doctors/profile/${data?.id}`} className="view-pro-btn">Профильді көру</Link>
+                        <Link to={`/booking/${data?.id}`} className="apt-btn">Кездесуге жазылу</Link>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@ const DoctorProfile = () => {
     const { id } = useParams();
     const { data, isLoading, isError } = useGetDoctorQuery(id);
     let content = null;
-    if (!isLoading && isError) content = <div>{message.error('Something went Wrong!')}</div>
+    if (!isLoading && isError) content = <div>{message.error('Бірдеңе Дұрыс Болмады!')}</div>
     if (!isLoading && !isError && data?.id === undefined) content = <Empty />
     if (!isLoading && !isError && data?.id) content = <SearchContent data={data} />
 
@@ -48,7 +48,7 @@ const DoctorProfile = () => {
     return (
         <>
             <Header />
-            <SubHeader title='Doctor Details' subtitle='Lorem ipsum dolor sit amet.' />
+            <SubHeader title='Doctor Details' subtitle='Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.' />
             <div className="container" style={{ marginBottom: '4rem', marginTop: '6rem' }}>
                 {content}
                 <div className='p-4 rounded' style={{ marginBottom: '7rem', backgroundColor: '#f3f3f3' }}>

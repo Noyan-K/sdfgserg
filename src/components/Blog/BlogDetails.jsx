@@ -16,7 +16,7 @@ const BlogDetails = () => {
     const { data, isLoading, isError } = useGetSingleBlogQuery(id);
 
     let content = null;
-    if (!isLoading && isError) content = <div>{message.error('Something went Wrong!')}</div>
+    if (!isLoading && isError) content = <div>{message.error('Бірдеңе дұрыс болмады!')}</div>
     if (!isLoading && !isError && data?.id === undefined) content = <Empty />
     if (!isLoading && !isError && data?.id) content =
         <div className="card shadow-sm text-center border-0 rounded-bottom">
@@ -45,10 +45,10 @@ const BlogDetails = () => {
                 </div>
             </div>
             <div className="d-flex gap-2 ms-2 px-2 py-3">
-                <span className="">Tags:</span>
+                <span className="">Тэгтер:</span>
                 <div className="d-flex gap-2">
                     {
-                        Array(4).fill(null).map((_item, index) => (<h5 key={index + 2}>#tag{index}</h5>))
+                        Array(4).fill(null).map((_item, index) => (<h5 key={index + 2}>#тэг{index}</h5>))
                     }
                 </div>
             </div>
@@ -56,7 +56,7 @@ const BlogDetails = () => {
     return (
         <>
             <Header />
-            <SubHeader title='Blog Details' subtitle='Lorem ipsum dolor sit amet.' />
+            <SubHeader title='Блог Мәліметтері' subtitle='Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.' />
             <div className="container-fluid" style={{ marginTop: 150 }}>
                 <div className="row mx-2">
                     <div className="col-md-9 col-sm-12">
@@ -66,7 +66,7 @@ const BlogDetails = () => {
                         <hr />
                         <div className="d-flex justify-content-end">
                             <div className="col-md-5 col-lg-4 ml-lg-0 text-end text-md-end">
-                                <h5 className="text-dark rounded d-inline me-2">Share On </h5>
+                                <h5 className="text-dark rounded d-inline me-2">Бөлісу</h5>
                                 <a className="btn btn-outline-primary btn-floating m-1" >
                                     <FaFacebookSquare />
                                 </a>

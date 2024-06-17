@@ -41,14 +41,14 @@ const BlogsEdit = () => {
                 <form className="row form-row" onSubmit={handleSubmit(onSubmit)}>
                     <div className="col-md-12">
                         <div className="form-group mb-2 card-label">
-                            <label>Title</label>
+                            <label>Тақырып</label>
                             <input defaultValue={data?.title} {...register("title")} className="form-control" />
                         </div>
                     </div>
 
                     <div className="col-md-12">
                         <div className="form-group mb-2 card-label">
-                            <label>Description</label>
+                            <label>Сипаттама</label>
                             <textarea defaultValue={data?.description} {...register("description")} className="form-control" rows={5} />
                         </div>
                     </div>
@@ -66,7 +66,7 @@ const BlogsEdit = () => {
 
                     <div className='text-center my-3'>
                         <Button htmlType='submit' type="primary" size='large' loading={isLoading} disabled={isLoading ? true : false} >
-                            {isLoading ? 'Saving ...' : 'Save Changes'}
+                            {isLoading ? 'Saving ...' : 'Өзгерістерді Сақтау'}
                         </Button>
                     </div>
                 </form>

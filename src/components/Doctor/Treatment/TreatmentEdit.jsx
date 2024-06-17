@@ -113,14 +113,14 @@ const TreatmentEdit = () => {
             <TreatmentOverview data={data} isAppointment={true}/>
             <div className="w-100 mb-3 rounded p-3 bg-gray-g">
                 <div className="text-center mb-2 d-flex justify-content-center">
-                    <h5 className="border-success border-bottom w-25 pb-2 border-5">Start Treatment</h5>
+                    <h5 className="border-success border-bottom w-25 pb-2 border-5">Емдеу</h5>
                 </div>
 
                 <form className="row form-row" onSubmit={handleSubmit(onSubmit)}>
                     <div className="col-md-6">
                         <div className="form-group mb-4">
                             <div className="mb-2">
-                                <h6 className="card-title text-secondary">Change Appointment Status</h6>
+                                <h6 className="card-title text-secondary">Кездесу күйін өзгерту</h6>
                             </div>
                             {isReadyData &&
                                 <SelectForm
@@ -136,7 +136,7 @@ const TreatmentEdit = () => {
                     <div className="col-md-6">
                         <div className="form-group mb-4">
                             <div className="mb-2">
-                                <h6 className="card-title text-secondary">Change Patient Status</h6>
+                                <h6 className="card-title text-secondary">Науқастың жағдайының статусын ауыстыру</h6>
                             </div>
                             {isReadyData &&
                                 <SelectForm
@@ -152,13 +152,13 @@ const TreatmentEdit = () => {
 
                     <div className="col-md-12">
                         <div className="card p-3 mb-3">
-                            <h6 className="card-title text-secondary">Identify Disease & Symtomps</h6>
+                            <h6 className="card-title text-secondary">Ауру мен симптомдарды анықтау</h6>
 
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="form-group mb-3">
                                         <div>
-                                            <label>Daignosis</label>
+                                            <label>Диагноз</label>
                                         </div>
                                         {isReadyData &&
                                             <SelectForm
@@ -174,7 +174,7 @@ const TreatmentEdit = () => {
                                 <div className="col-md-6">
                                     <div className="form-group mb-3">
                                         <div>
-                                            <label>Disease</label>
+                                            <label>Ауру</label>
                                         </div>
                                         {isReadyData &&
                                             <SelectForm
@@ -192,10 +192,10 @@ const TreatmentEdit = () => {
 
                     <div className="col-md-12 mb-3">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Medical Checkup</h6>
+                            <h6 className="card-title text-secondary">Медициналық тексеру</h6>
                             <div className="row form-row">
                                 <div className="form-group mb-2 card-label">
-                                    <label>Medical Checkup</label>
+                                    <label>Медициналық тексеру</label>
                                     {isReadyData &&
                                         <SelectForm
                                             mode={true}
@@ -204,7 +204,7 @@ const TreatmentEdit = () => {
                                             defaultValue={defatulTests}
                                         />
                                     }
-                                    <small className="form-text text-muted">Note : Type & Press enter to add new services</small>
+                                    <small className="form-text text-muted">Ескертпе: Жаңа қызметтерді қосу үшін теріп, enter пернесін басыңыз</small>
                                 </div>
                             </div>
                         </div>
@@ -212,12 +212,12 @@ const TreatmentEdit = () => {
 
                     <div className="col-md-12">
                         <div className="card mb-2 p-3 mt-2">
-                            <h6 className="card-title text-secondary">Medicine</h6>
+                            <h6 className="card-title text-secondary">Дәрі</h6>
                             {
                                 isReadyData && medicineList?.map((item, index) => (
                                     <div className="row form-row mb-4 position-relative border border-success rounded m-2 p-2" key={index + 1}>
                                         <div className="col-md-6 mb-3">
-                                            <label>Medicine Name</label>
+                                            <label>Медицина атауы</label>
                                             <div className="form-group mb-2">
                                                 <InputAutoCompleteForm
                                                     id={item.id}
@@ -229,7 +229,7 @@ const TreatmentEdit = () => {
                                         </div>
 
                                         <div className="col-md-6 mb-3">
-                                            <label>Dosage</label>
+                                            <label>Доза</label>
                                             <div className="form-group mb-2">
                                                 <SelectFormForMedicine
                                                     id={item.id}
@@ -243,7 +243,7 @@ const TreatmentEdit = () => {
                                         </div>
 
                                         <div className="col-md-6 mb-3">
-                                            <label>Frequency</label>
+                                            <label>Жиілік</label>
                                             <div className="form-group mb-2">
                                                 <SelectFormForMedicine
                                                     id={item.id}
@@ -257,7 +257,7 @@ const TreatmentEdit = () => {
                                         </div>
 
                                         <div className="col-md-6 mb-3">
-                                            <label>Start Date / End Date</label>
+                                            <label>Басталу күні / аяқталу күні</label>
                                             <div className="form-group mb-2">
                                                 <Space direction="vertical" size={12}>
                                                     <MedicineRangePickerForm
@@ -295,13 +295,13 @@ const TreatmentEdit = () => {
                             {addMedicine.length > 0 &&
                                 <>
                                     <div className="card p-3 mb-3" style={{ background: "#e8e8e8" }}>
-                                        <h5>Add New Medicine</h5>
+                                        <h5>Жаңа дәрі қосу</h5>
                                         {
                                             addMedicine?.map((item, index) => (
                                                 <div className="row form-row mb-4 position-relative border border-success rounded m-2 p-2" key={index + 1}>
 
                                                     <div className="col-md-6 mb-3">
-                                                        <label>Medicine Name</label>
+                                                        <label>Медицина атауы</label>
                                                         <div className="form-group mb-2">
                                                             <InputAutoCompleteForm
                                                                 id={item.id}
@@ -312,7 +312,7 @@ const TreatmentEdit = () => {
                                                     </div>
 
                                                     <div className="col-md-6 mb-3">
-                                                        <label>Dosage</label>
+                                                        <label>Доза</label>
                                                         <div className="form-group mb-2">
                                                             <SelectFormForMedicine
                                                                 id={item.id}
@@ -325,7 +325,7 @@ const TreatmentEdit = () => {
                                                     </div>
 
                                                     <div className="col-md-6 mb-3">
-                                                        <label>Frequency</label>
+                                                        <label>Жиілік</label>
                                                         <div className="form-group mb-2">
                                                             <SelectFormForMedicine
                                                                 id={item.id}
@@ -338,7 +338,7 @@ const TreatmentEdit = () => {
                                                     </div>
 
                                                     <div className="col-md-6 mb-3">
-                                                        <label>Start Date / End Date</label>
+                                                        <label>Басталу күні / аяқталу күні</label>
                                                         <div className="form-group mb-2">
                                                             <Space direction="vertical" size={12}>
                                                                 <MedicineRangePickerForm
@@ -361,7 +361,7 @@ const TreatmentEdit = () => {
                                     </div>
 
                                     <div className="text-end">
-                                        <Button type="primary" icon={<FaCheck />} onClick={handleAddMedicine} disabled={addMedicine.length === 0}>Add All Medicine</Button>
+                                        <Button type="primary" icon={<FaCheck />} onClick={handleAddMedicine} disabled={addMedicine.length === 0}>Барлық дәрілерді қосу</Button>
                                     </div>
                                 </>
                             }
@@ -376,7 +376,7 @@ const TreatmentEdit = () => {
                     </div>
 
                     <div className="col-md-12 mb-3">
-                        <label>Follow Up Date</label>
+                        <label>Бақылау күні</label>
                         <div className="form-group mb-2">
                             <DatePicker
                                 presets={DatePickerSinglePresets}
@@ -390,7 +390,7 @@ const TreatmentEdit = () => {
 
                     <div className="col-md-12 mb-3">
                         <div className="form-group mb-2">
-                            <label>Instruction</label>
+                            <label>Нұсқау</label>
                             {isReadyData &&
                                 <TextArea rows={4} placeholder="Instruction text ..." onChange={(e) => setInstruction(e.target.value)} defaultValue={data?.instruction} />
                             }

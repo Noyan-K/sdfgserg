@@ -17,7 +17,7 @@ const PatientDashboard = () => {
     
     const InvoiceColumns = [
         {
-            title: 'Doctor',
+            title: 'Врач',
             key: 1,
             width: 150,
             render: function (data) {
@@ -35,13 +35,13 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'Total Paid',
+            title: 'Итого',
             key: 2,
             width: 100,
             dataIndex: "totalAmount"
         },
         {
-            title: 'Paid On',
+            title: 'Төленді',
             key: 3,
             width: 100,
             render: function (data) {
@@ -49,25 +49,25 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'Payment Method',
+            title: 'Төлем әдісі',
             key: 4,
             width: 100,
             dataIndex: "paymentMethod"
         },
         {
-            title: 'Payment Type',
+            title: 'Төлем әдісі',
             key: 4,
             width: 100,
             dataIndex: "paymentType"
         },
         {
-            title: 'Action',
+            title: 'Әрекет',
             key: '5',
             width: 100,
             render: function (data) {
                 return (
                     <Link to={`/booking/invoice/${data?.appointment?.id}`}>
-                        <Button type='primary' size='medium'>View</Button>
+                        <Button type='primary' size='medium'>қарау</Button>
 
                     </Link>
                 )
@@ -76,7 +76,7 @@ const PatientDashboard = () => {
     ];
     const prescriptionColumns = [
         {
-            title: 'App Doctor',
+            title: 'Приложение Доктор',
             key: 11,
             width: 150,
             render: function (data) {
@@ -94,7 +94,7 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'Appointment Id',
+            title: 'Кездесу идентификаторы',
             dataIndex: "appointment",
             key: 1,
             render: ({trackingId}) =>{
@@ -109,7 +109,7 @@ const PatientDashboard = () => {
         },
 
         {
-            title: 'Appointment Date',
+            title: 'Назначенная дата',
             key: 12,
             width: 100,
             render: function (data) {
@@ -117,7 +117,7 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'Follow-Update',
+            title: 'Кейінгі жаңарту',
             dataIndex: "followUpdate",
             key: 4,
             render: function (data) {
@@ -125,7 +125,7 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'Archived',
+            title: 'Мұрағатта',
             dataIndex: "isArchived",
             key: 4,
             render: function ({isArchived}) {
@@ -133,7 +133,7 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'Action',
+            title: 'Әрекет',
             key: 13,
             width: 100,
             render: function (data) {
@@ -159,7 +159,7 @@ const PatientDashboard = () => {
     ];
     const appointmentColumns = [
         {
-            title: 'Doctor',
+            title: 'Дәрігер',
             key: 20,
             width: 150,
             render: function (data) {
@@ -177,7 +177,7 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'App Date',
+            title: 'Қосымшаның күні',
             key: 22,
             width: 100,
             render: function (data) {
@@ -187,7 +187,7 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'Booking Date',
+            title: 'Брондау күні',
             key: 22,
             width: 100,
             render: function (data) {
@@ -195,7 +195,7 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'Status',
+            title: 'Статус',
             key: 24,
             width: 100,
             render: function (data) {
@@ -203,13 +203,13 @@ const PatientDashboard = () => {
             }
         },
         {
-            title: 'Action',
+            title: 'Әрекет',
             key: 25,
             width: 100,
             render: function (data) {
                 return (
                     <Link to={`/dashboard/appointments/${data.id}`}>
-                        <Button type='primary'>View</Button>
+                        <Button type='primary'>қарау</Button>
                     </Link>
                 )
             }
@@ -219,7 +219,7 @@ const PatientDashboard = () => {
     const items = [
         {
             key: '1',
-            label: 'Appointment',
+            label: 'Встреча',
             children: <CustomTable
                 loading={pIsLoading}
                 columns={appointmentColumns}
@@ -231,7 +231,7 @@ const PatientDashboard = () => {
         },
         {
             key: '2',
-            label: 'Prescription',
+            label: 'Рецепт',
             children: <CustomTable
                 loading={prescriptionIsLoading}
                 columns={prescriptionColumns}
@@ -244,7 +244,7 @@ const PatientDashboard = () => {
         },
         {
             key: '3',
-            label: 'Billing',
+            label: 'Счет',
             children: <CustomTable
                 loading={InvoicesIsLoading}
                 columns={InvoiceColumns}

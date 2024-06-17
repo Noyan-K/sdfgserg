@@ -7,12 +7,12 @@ const OverView = () => {
     return (
         <div className="col-md-12 col-lg-9">
             <div className='mb-3'>
-                <h5 className='overview-text'>About Me</h5>
+                <h5 className='overview-text'>Мен туралы</h5>
                 <p className='text-secondary'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
 
             <div>
-                <h5 className='overview-text'>Education</h5>
+                <h5 className='overview-text'>Білімі</h5>
 
                 <VerticalTimeline>
                     <VerticalTimelineElement
@@ -103,7 +103,7 @@ const OverView = () => {
                 
             </div>
             <div >
-                <h5 className='overview-text'>Awards</h5>
+                <h5 className='overview-text'>Марапаттары</h5>
 
                 <VerticalTimeline>
                     <VerticalTimelineElement
@@ -148,25 +148,25 @@ const OverView = () => {
                 </VerticalTimeline>
             </div>
             <div>
-                <h5 className='overview-text'>Services</h5>
+                <h5 className='overview-text'>Қызметтер</h5>
                 <ul>
-                    <li>Tooth cleaning </li>
-                    <li>Root Canal Therapy</li>
-                    <li>Implants</li>
-                    <li>Composite Bonding</li>
-                    <li>Fissure Sealants</li>
-                    <li>Surgical Extractions</li>
+                    <li>Тіс тазалау </li>
+                    <li>Түбірлік арна терапиясы</li>
+                    <li>Имплантаттар</li>
+                    <li>Композиттік байланыс</li>
+                    <li>Фиссура тығыздағыштар</li>
+                    <li>Хирургиялық экстракциялар</li>
                 </ul>
             </div>
             <div>
                 <h5 className='overview-text'>Specializations</h5>
                 <ul className="clearfix">
-                    <li>Children Care</li>
-                    <li>Dental Care</li>
-                    <li>Oral and Maxillofacial Surgery </li>
-                    <li>Orthodontist</li>
-                    <li>Periodontist</li>
-                    <li>Prosthodontics</li>
+                    <li>Балаларға қамқорлық</li>
+                    <li>Тіс күтімі</li>
+                    <li>Ауыз және жақ-бет хирургиясы</li>
+                    <li>Ортодонт дәрігері</li>
+                    <li>Пародонт дәрігері</li>
+                    <li>Протездеу</li>
                 </ul>
             </div>
         </div>

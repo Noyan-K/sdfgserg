@@ -25,7 +25,7 @@ const TreatmentOverview = ({ data, isAppointment = false }) => {
                     </div>
 
                     <div className="col-7 px-5">
-                        <h5>Patient Overview</h5>
+                        <h5>Пациент</h5>
                         <hr />
                         <div className="p-2 rounded" style={{ background: 'rgb(218 218 219)' }}>
                             <p className="form-text text-start m-0">{isAppointment ? data?.appointment?.description : data?.description}</p>
@@ -37,7 +37,7 @@ const TreatmentOverview = ({ data, isAppointment = false }) => {
                                     <Tag color="#87d068" className='ms-2 text-uppercase'>{isAppointment ? data?.appointment?.patientType : data?.patientType}</Tag>
                                 </span>
                             </h6>
-                            <h6>Current Status : 
+                            <h6>Ағымдағы Күй : 
                                 <span className="btn-status btn-st-danger">
                                     <Tag color="#f50" className='ms-2 text-uppercase'>{isAppointment ? data?.appointment?.status : data?.status}</Tag>
                                 </span>
@@ -59,7 +59,7 @@ const TreatmentOverview = ({ data, isAppointment = false }) => {
             </div>
 
             <div className="w-100 mb-3 rounded p-2 text-start bg-gray-g">
-                <Link to={'/'}>Show Previous Medical History ? </Link>
+                <Link to={'/'}>Алдыңғы медициналық тарихты көрсету?</Link>
             </div>
         </>
     )

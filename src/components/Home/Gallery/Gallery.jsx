@@ -16,8 +16,8 @@ const Gallery = () => {
         <section className="gallery container">
             <div className="text-center mb-5">
                 <div className="section-title mb-3">
-                    <h2>Gallery</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <h2>Галерея</h2>
+                    <p>Неліктен Институционализация Жеңісінің айқын белгілері тек маркетингтік және қаржылық алғышарттар тұрғысынан қарастырылғанын айту қиын.</p>
                 </div>
             </div>
 

@@ -17,22 +17,22 @@ const PrescriptionView = () => {
 
     const columns = [
         {
-            title: 'Medicine',
+            title: 'Лекарство',
             dataIndex: 'medicine',
             key: 'medicine',
         },
         {
-            title: 'Dosage',
+            title: 'Дозировка',
             dataIndex: 'dosage',
             key: 'dosage',
         },
         {
-            title: 'Frequency',
+            title: 'Частота',
             dataIndex: 'frequency',
             key: 'frequency',
         },
         {
-            title: 'Period',
+            title: 'Период',
             key: 'duration',
             render: function (data) {
                 const duratinDate = data.duration.split(',');
@@ -40,7 +40,7 @@ const PrescriptionView = () => {
                 const startDate = moment(duratinDate[1]);
                 const getDiffrent = endDate.diff(startDate, "days");
                 return (
-                    <>{getDiffrent} days</>
+                    <>{getDiffrent} дни</>
                 )
             }
         },
@@ -48,8 +48,8 @@ const PrescriptionView = () => {
     ];
 
     let content = null;
-    if (isLoading) content = <div>Loading ...</div>
-    if (!isLoading && isError) content = <div>Something went Wrong!</div>
+    if (isLoading) content = <div>Загрузка ...</div>
+    if (!isLoading && isError) content = <div>Что-то пошло не так!</div>
     if (!isLoading && !isError && !data) content = <Empty />
     if (!isLoading && !isError && data) content =
         <>
@@ -64,8 +64,8 @@ const PrescriptionView = () => {
                             </div>
                             <div className="col-md-6">
                                 <p className="invoice-details">
-                                    <strong>Tracking Id:</strong> {data?.appointment?.trackingId} <br />
-                                    <strong>Issued:</strong> {moment(data.createdAt).format('LL')}
+                                    <strong>Идентификатор для отслеживания:</strong> {data?.appointment?.trackingId} <br />
+                                    <strong>Изданный:</strong> {moment(data.createdAt).format('LL')}
                                 </p>
                             </div>
                         </div>
@@ -85,17 +85,17 @@ const PrescriptionView = () => {
                             </div>
                             <div className="col-md-12">
                                 <div className="invoice-info">
-                                    <strong className="customer-text text-secondary">Patient Information:</strong>
+                                    <strong className="customer-text text-secondary">Информация о пациенте:</strong>
                                     <div className="invoice-details invoice-details-two">
                                         <div className="d-flex justify-content-between patient-name">
                                             <div>
-                                                <h5 style={{ fontWeight: 700 }}>Patient Name : {data?.patient?.firstName + ' ' + data?.patient?.lastName}</h5>
-                                                <p className="form-text">Address: {data?.patient?.address}, {data?.patient?.city}, {data?.patient?.country}</p>
+                                                <h5 style={{ fontWeight: 700 }}>Науқастың аты: {data?.patient?.firstName + ' ' + data?.patient?.lastName}</h5>
+                                                <p className="form-text">Адрес: {data?.patient?.address}, {data?.patient?.city}, {data?.patient?.country}</p>
                                             </div>
                                             <div>
-                                                <p>Sex : {data?.patient?.gender}</p>
-                                                <p>Age : {moment().diff(data?.patient?.dateOfBirth, 'years')}</p>
-                                                <p>Weight : {data?.patient?.weight}</p>
+                                                <p>Пол: {data?.patient?.Gender}</p>
+                                                <p>Возраст: {moment().diff(data?.patient?.dateOfBirth, 'years')}</p>
+                                                <p>Вес : {data?.patient?.weight}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -109,26 +109,26 @@ const PrescriptionView = () => {
                             <div className="col-md-3 col-xl-3 border-end border-2 symptoms-section">
                                 <div className="mt-3">
                                     <div>
-                                        <h5>SYMPTOMS</h5>
+                                        <h5>Симптомы</h5>
                                         <p>{data?.disease}</p>
                                     </div>
                                     <div>
-                                        <h5>DAIGNOSIS</h5>
+                                        <h5>Диагнозы</h5>
                                         <p>{data?.daignosis}</p>
                                     </div>
                                     <div>
-                                        <h5>TESTS</h5>
+                                        <h5>Тесты</h5>
                                         <p>{data?.test}</p>
                                     </div>
                                     <div>
-                                        <h5>NEXT APOINTMENT</h5>
+                                        <h5>Следующая встреча</h5>
                                         <p>
-                                            <span>Date : {moment(data?.followUpdate).format('LL')}</span> <br />
-                                            <span>Time : {moment(data?.followUpdate).format('LT')}</span>
+                                            <span>Дата : {moment(data?.followUpdate).format('LL')}</span> <br />
+                                            <span>Время : {moment(data?.followUpdate).format('LT')}</span>
                                         </p>
                                     </div>
                                     <div>
-                                        <h5>ADVICE</h5>
+                                        <h5>СОВЕТ</h5>
                                         <p>{data?.instruction}</p>
                                     </div>
                                 </div>
